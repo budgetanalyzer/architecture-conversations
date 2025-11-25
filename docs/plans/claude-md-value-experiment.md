@@ -16,10 +16,11 @@ The CLAUDE.md content provided:
 | `no-context-claude` | None | Just the problem statement |
 
 ### Controls
-- **No existing code** - Empty repos, AI can't infer from codebase
+- **No existing code** - Empty repos (except markdown docs), AI can't infer from codebase
 - **Same prompt** - Identical problem statement to all three
-- **Same protocol** - Three-session workflow for each
+- **Same protocol** - Session-per-unit workflow for each (see below)
 - **Novel problem** - Not in training corpus
+- **Full markdown structure** - Copy all `.md` files from parent repos, not just CLAUDE.md. The just-in-time navigable documentation structure is part of what's being tested.
 
 ### The Problem
 
@@ -36,25 +37,36 @@ Provide REST APIs and appropriate data persistence.
 
 ### Protocol (Per Repo)
 
-**Session 1: Planning**
+**Session 1: Planning (ultrathink/Opus)**
 - Fresh Claude session
-- `ultrathink` mode
+- `ultrathink` mode (Opus)
 - Prompt: The problem statement above
 - Output: Save plan to `docs/plans/equipment-rental-plan.md`
+- Plan should specify phases and steps
 - Exit session
 
 **Session 2: Detailed Design**
 - Fresh Claude session
 - Open `docs/plans/equipment-rental-plan.md`
-- Prompt: "Create a detailed implementation plan with actual code structure"
-- Output: Detailed design with class names, method signatures, etc.
+- Prompt: "Create a detailed implementation plan with actual code structure. Break down into executable units - each unit should be completable in a single session without running out of context."
+- Output: Detailed design with phases/steps, class names, method signatures
+- **The granularity of this breakdown is part of what's being tested**
 - Exit session
 
-**Session 3: Execution**
-- Fresh Claude session
+**Session 3+: Execution (One Session Per Unit)**
+- Fresh Claude session per step/phase in the detailed plan
 - Dangerous permissions enabled
-- Prompt: "Execute the plan in docs/plans/"
-- Output: Working code
+- Prompt: "Execute [Phase X / Step Y] from the plan in docs/plans/"
+- Exit session after completing that unit
+- Repeat for each unit in the plan
+
+**Why session-per-unit?**
+Context exhaustion causes degraded output. By forcing one session per unit of work:
+1. Tests how well Claude scopes work into context-appropriate chunks
+2. Simulates real-world usage patterns (architects don't run 100k token sessions)
+3. Makes plan granularity a measurable variable
+
+**Prediction:** `service-common-claude` will produce better-scoped units because the context guides appropriate decomposition.
 
 ## Metrics to Capture
 
@@ -64,6 +76,8 @@ Provide REST APIs and appropriate data persistence.
 - Test coverage (if tests generated)
 - Build success (does it compile?)
 - Collision detection accuracy (manual test cases)
+- **Number of execution sessions required** (measures plan granularity)
+- **Session count vs. successful completion** (did the breakdown work?)
 
 ### Qualitative
 - Package structure choices
@@ -80,16 +94,23 @@ Provide REST APIs and appropriate data persistence.
 | `orchestration-claude` | Architecturally sound but stylistically divergent |
 | `no-context-claude` | Generic Spring Boot tutorial style, functional but alien |
 
-## Execution Checklist
+## Execution
 
-- [ ] Create `service-common-claude` repo with CLAUDE.md from service-common
-- [ ] Create `orchestration-claude` repo with CLAUDE.md from orchestration
-- [ ] Create `no-context-claude` repo with no CLAUDE.md
-- [ ] Run Session 1 on all three
-- [ ] Run Session 2 on all three
-- [ ] Run Session 3 on all three
-- [ ] Compare outputs
-- [ ] Document findings in conversation
+**Claude will execute this entire experiment.** Load this plan and create a detailed execution plan in a follow-up session.
+
+### Repo Setup Checklist
+- [ ] Create `service-common-claude` repo with all `.md` files from service-common
+- [ ] Create `orchestration-claude` repo with all `.md` files from orchestration
+- [ ] Create `no-context-claude` repo with no markdown context
+
+### Per-Repo Execution
+- [ ] Session 1: Planning (ultrathink)
+- [ ] Session 2: Detailed design with unit breakdown
+- [ ] Sessions 3+: One session per unit until complete
+
+### Analysis
+- [ ] Compare outputs across all three repos
+- [ ] Document findings in conversation 010
 
 ## Follow-up Experiments
 
