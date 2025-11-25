@@ -147,6 +147,8 @@ This repository discusses the [Budget Analyzer](https://github.com/budgetanalyze
 
 **At the start of every session, read `conversations/INDEX.md`** to load context about prior architectural discussions. This lightweight index provides summaries of all conversations - load full conversations only when the topic becomes relevant to the current discussion.
 
+**Use `<env>` for current date**: Your training data may be stale. Always check the `<env>` block provided in your system context for `Today's date` when dating conversations or determining temporal context.
+
 ### This Repository Is Different
 
 Unlike the Budget Analyzer service repos, this is:
@@ -169,6 +171,7 @@ The value of these conversations is truth-seeking, not validation. See `conversa
 ### When Working Here
 
 - Read existing conversations before adding new ones
+- **Never modify existing conversations** - they are historical records of actual discussions; add new conversations instead
 - Maintain architect-level depth (avoid beginner explanations)
 - Ground insights in production evidence (Budget Analyzer repos)
 - Extract patterns when concepts are reusable
