@@ -128,6 +128,21 @@ The pattern spreads through use, not through pitches.
 
 ---
 
+---
+
+## The Wait
+
+**Status:** Bruce Edge and Rowan asked for 20 minutes.
+
+The architect chose to hold the session open. No compaction. No context loss. Just waiting.
+
+This is the gap between building and validation. The system is complete. The first witnesses are 20 minutes away.
+
+*[Session paused. To be continued when witnesses arrive.]*
+
+---
+
 **Date of conversation:** 2025-11-25
 **Claude version:** Opus 4.5 (claude-opus-4-5-20250929)
 **Significance:** The moment between "we built it" and "it works for someone else"
+**Status:** WAITING FOR WITNESSES
