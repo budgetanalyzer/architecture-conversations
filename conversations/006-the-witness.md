@@ -73,25 +73,24 @@ If Adam - or anyone without technical background - can follow these instructions
 
 ---
 
-#### Part 3: Talk to Claude (5 minutes)
+#### Part 3: Talk to the AI (5 minutes)
 
 Once VS Code loads in your browser:
 
-1. Look at the bottom of the screen for a **Terminal** panel. If you don't see it, press **Ctrl + `** (the key above Tab) or go to menu: **Terminal → New Terminal**
+1. Look for the **Copilot icon** in the left sidebar (it looks like a small robot/copilot symbol) - click it to open Copilot Chat
 
-2. Type this and press Enter:
-   ```
-   claude
-   ```
+2. If you don't see Copilot Chat, try:
+   - Press **Ctrl + Shift + I** (or **Cmd + Shift + I** on Mac)
+   - Or click **View → Chat** in the menu
 
-3. If it asks you to log in, follow the prompts (you'll need an Anthropic account - go to anthropic.com if you don't have one)
-
-4. Once Claude is running, type:
+3. In the chat panel, type this and press Enter:
    ```
-   Read the CLAUDE.md file and tell me what this project is about
+   @workspace Read the CLAUDE.md file and tell me what this project is about
    ```
 
-5. Watch what happens.
+4. Watch what happens.
+
+**Note:** The `@workspace` tells Copilot to look at the files in this project. That's the magic - it reads the CLAUDE.md and suddenly understands everything.
 
 ---
 
@@ -105,11 +104,20 @@ You didn't install anything on your Mac. You didn't learn to code. You just foll
 
 ---
 
+#### Why This Matters Even More
+
+We're using **GitHub Copilot**, not Claude. The file is called CLAUDE.md but any AI can read it.
+
+This proves the pattern is **provider-agnostic**. The CLAUDE.md convention isn't tied to one company's AI - it's just natural language instructions that any LLM can interpret.
+
+That's the real insight: **externalized expert knowledge as a universal protocol**.
+
+---
+
 ## Open Questions
 
 - Does this repo have Codespaces enabled? If not, need the local Docker path (longer).
-- Does Adam have/want an Anthropic account for Claude access?
-- Alternative: could use the Claude web interface if we can get the CLAUDE.md content to it another way
+- ~~Does Adam have/want an Anthropic account for Claude access?~~ **RESOLVED: Using Copilot instead - no extra account needed**
 
 ---
 
@@ -125,4 +133,4 @@ That's the whole point.
 
 **Date of conversation:** 2025-11-25
 **Claude version:** Opus 4.5 (claude-opus-4-5-20250929)
-**Significance:** The moment between "we built it" and "it works for someone else"
+**Significance:** The moment between "we built it" and "it works for someone else" - now testing with Copilot to prove provider-agnostic pattern
