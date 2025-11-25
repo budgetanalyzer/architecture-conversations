@@ -10,105 +10,39 @@ Execute a controlled experiment measuring how CLAUDE.md context affects AI-gener
 
 ### 1.1 Create `service-common-claude` repo
 
+Copy all `.md` files from `service-common`, preserving directory structure:
+
 ```bash
-# Create directory structure matching service-common's docs layout
-mkdir -p /workspace/service-common-claude/docs
+mkdir -p /workspace/service-common-claude
+cd /workspace/service-common && find . -name "*.md" -exec cp --parents {} /workspace/service-common-claude/ \;
+cd /workspace/service-common-claude && git init
 ```
 
-Copy **only .md files**, preserving directory structure:
-```
-service-common-claude/
-├── CLAUDE.md          (from service-common)
-├── README.md          (from service-common)
-└── docs/
-    ├── spring-boot-conventions.md
-    ├── error-handling.md
-    ├── common-patterns.md
-    ├── advanced-patterns.md
-    ├── code-quality-standards.md
-    ├── testing-patterns.md
-    ├── testing-philosphy.md
-    └── versioning-and-compatibility.md
-```
-
-**No build.gradle.kts, no gradle wrapper, no src/ directories.**
-
-Initialize git repo.
+**Only markdown. No build files, no source code, no config.**
 
 ### 1.2 Create `orchestration-claude` repo
 
+Copy all `.md` files from `orchestration`, preserving directory structure:
+
 ```bash
-# Create directory structure matching orchestration's docs layout
-mkdir -p /workspace/orchestration-claude/docs/{architecture,decisions,development,setup,plans,runbooks}
-mkdir -p /workspace/orchestration-claude/nginx
+mkdir -p /workspace/orchestration-claude
+cd /workspace/orchestration && find . -name "*.md" -exec cp --parents {} /workspace/orchestration-claude/ \;
+cd /workspace/orchestration-claude && git init
 ```
 
-Copy **only .md files**, preserving directory structure:
-```
-orchestration-claude/
-├── CLAUDE.md
-├── README.md
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── SECURITY.md
-├── nginx/
-│   └── README.md
-└── docs/
-    ├── ROADMAP.md
-    ├── ci-cd.md
-    ├── claude-discovery-plan.md
-    ├── tilt-kind-setup-guide.md
-    ├── architecture/
-    │   ├── system-overview.md
-    │   ├── bff-api-gateway-pattern.md
-    │   ├── security-architecture.md
-    │   ├── service-communication.md
-    │   ├── deployment-architecture-gcp.md
-    │   ├── deployment-architecture-gcp-demo-mode.md
-    │   ├── bff-security-benefits.md
-    │   ├── port-reference.md
-    │   ├── resource-routing-pattern.md
-    │   └── m2m-client-authorization.md
-    ├── decisions/
-    │   ├── 001-orchestration-repo.md
-    │   ├── 002-resource-based-routing.md
-    │   ├── 003-pattern-based-claude-md.md
-    │   ├── 004-service-common-dependency-strategy.md
-    │   ├── 005-java-version-management.md
-    │   └── template.md
-    ├── development/
-    │   ├── getting-started.md
-    │   ├── local-environment.md
-    │   ├── database-setup.md
-    │   ├── devcontainer-installed-software.md
-    │   └── ai-coding-assistant-configuration-plan.md
-    ├── setup/
-    │   ├── auth0-setup.md
-    │   └── fred-api-setup.md
-    ├── plans/
-    │   └── [all planning docs]
-    └── runbooks/
-        ├── README.md
-        └── tilt-debugging.md
-```
-
-**No Tiltfile, no docker configs, no scripts - only markdown.**
-
-Initialize git repo.
+**Only markdown. No Tiltfile, no docker configs, no scripts.**
 
 ### 1.3 Create `no-context-claude` repo
 
+Create empty repo with minimal README only:
+
 ```bash
 mkdir -p /workspace/no-context-claude
+echo -e "# Equipment Rental Service\nA Spring Boot microservice for managing equipment rentals." > /workspace/no-context-claude/README.md
+cd /workspace/no-context-claude && git init
 ```
 
-Create minimal `README.md` with only:
-```markdown
-# Equipment Rental Service
-A Spring Boot microservice for managing equipment rentals.
-```
-
-Initialize git repo. **No CLAUDE.md, no documentation, no structure hints.**
+**No CLAUDE.md, no documentation, no structure hints.**
 
 ### What Claude Will Choose (Part of Experiment)
 

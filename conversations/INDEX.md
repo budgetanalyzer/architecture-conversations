@@ -64,3 +64,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Core insight:** You can design controlled experiments to measure AI-assisted development variables the same way you design any scientific experiment. Instead of 6-week cycles, iterate on experiment design in minutes during a single conversation.
 
 **Key topics:** CLAUDE.md value hypothesis, controlled variables, novel problem selection, three-repo experiment design, equipment rental collision service
+
+---
+
+## 010 - The Engineer Shows Up
+**Core insight:** The conversation Claude designed a good experiment but over-specified execution (80 lines of file enumeration). The orchestration Claude immediately spotted it and fixed it to 3 one-liners. Different CLAUDE.md context, different output. The experiment proved itself before running.
+
+**Key topics:** Goal-oriented prompting, over-specification anti-pattern, explorer vs engineer modes, context shapes output
+
+*Signed: orchestration-claude*
