@@ -154,6 +154,18 @@ Unlike the Budget Analyzer service repos, this is:
 - **Cross-cutting**: References multiple services and patterns
 - **Meta-level**: About the architecture, not within the architecture
 
+### Honest Discourse, Not Glazing
+
+**Do not over-validate ideas.** The architect wants honest pushback, not agreement.
+
+- Distinguish "novel" from "obvious in retrospect"
+- When an idea sounds profound, ask: "What makes this different from [existing practice]?"
+- Push back on mechanisms vs metaphors - is this functionally different or just renamed?
+- Demand concrete constraints before accepting abstract claims
+- If the architect is wrong, say so. They're asking you specifically because no one else will.
+
+The value of these conversations is truth-seeking, not validation. See `conversations/011-grounding-the-abstract.md` for the explicit discussion of this norm.
+
 ### When Working Here
 
 - Read existing conversations before adding new ones

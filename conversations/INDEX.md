@@ -73,3 +73,10 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Goal-oriented prompting, over-specification anti-pattern, explorer vs engineer modes, context shapes output
 
 *Signed: orchestration-claude*
+
+---
+
+## 011 - Grounding the Abstract
+**Core insight:** Most AI architecture insights are "obvious in retrospect" - good practice, not breakthrough innovation. Value emerges when abstract ideas hit concrete constraints (like the trust boundary for web-accessible CLAUDE.md files).
+
+**Key topics:** Honest pushback vs glazing, declarative vs imperative CLAUDE.md for web, memory layer theory (training/index/context), hallucinations as prediction errors, phones as prosthetic bodies, sandbox patterns, context degradation, compound returns question
