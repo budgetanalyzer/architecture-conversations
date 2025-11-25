@@ -124,6 +124,7 @@ This repository discusses the [Budget Analyzer](https://github.com/budgetanalyze
 3. Extract pattern to `patterns/` if reusable
 4. Create visual in `visuals/` if it aids understanding
 5. Reference real implementation in Budget Analyzer
+6. **Update `conversations/INDEX.md`** with 2-3 line summary
 
 ### Extracting a Pattern
 
@@ -141,6 +142,10 @@ This repository discusses the [Budget Analyzer](https://github.com/budgetanalyze
 4. Include in conversation markdown or separate file in `visuals/`
 
 ## Notes for AI Agents
+
+### Session Initialization
+
+**At the start of every session, read `conversations/INDEX.md`** to load context about prior architectural discussions. This lightweight index provides summaries of all conversations - load full conversations only when the topic becomes relevant to the current discussion.
 
 ### This Repository Is Different
 
