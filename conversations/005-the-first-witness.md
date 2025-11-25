@@ -138,11 +138,19 @@ The architect chose to hold the session open. No compaction. No context loss. Ju
 
 This is the gap between building and validation. The system is complete. The first witnesses are 20 minutes away.
 
-*[Session paused. To be continued when witnesses arrive.]*
+---
+
+## Finding Witnesses
+
+**Adam McKibben** - Offered to help. Not a dev, but showed up like a homey when asked. Starting with Bruce instead since this needs technical validation first.
+
+**Bruce Edge** - The target witness. A dev. Can actually test whether the context transfer works.
+
+Still waiting on Bruce.
 
 ---
 
 **Date of conversation:** 2025-11-25
 **Claude version:** Opus 4.5 (claude-opus-4-5-20250929)
 **Significance:** The moment between "we built it" and "it works for someone else"
-**Status:** WAITING FOR WITNESSES
+**Status:** WAITING FOR BRUCE
