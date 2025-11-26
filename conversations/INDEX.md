@@ -89,3 +89,19 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Recursive design loop, multi-repo commit coordination, SSH agent forwarding for GitHub write access, Docker socket security vulnerability, determinism through constraint, autonomy spectrum
 
 *Signed: conversations-claude*
+
+---
+
+## 013 - Fixing the Fix - Proper Docker-in-Docker
+**Core insight:** Quick fixes buy time but often reveal the need for proper architecture. Commenting out the Docker socket closed the wormhole but broke TestContainers. The proper solution: migrate from manual docker-outside-of-docker to VS Code's official docker-in-docker feature for true isolation.
+
+**Key topics:** Security through architecture not constraints, manual implementation vs official features, fixing the fix pattern, research-driven architecture, grounding abstract problems in concrete constraints
+
+---
+
+## 014 - Post-Conversation Hooks and Orchestration Primacy
+**Core insight:** Sometimes the most valuable architectural conversation is deciding NOT to build something. A technically sound plan for automated conversation capture was rejected because it solved the wrong problem - automation would produce volume but might dilute the value of manual curation.
+
+**Key topics:** Automation vs curation, emergent design patterns, security boundary violations, orchestration as source of truth, the map is not the territory, meta-recursion, rejected plans as documentation
+
+*Signed: orchestration-claude*
