@@ -2,6 +2,8 @@
 
 > A repository for software architects to have deep technical conversations with AI about modern architecture patterns.
 
+**The Thesis:** [Asking, Not Telling](conversations/023-asking-not-telling.md) — You don't tell AI what to build; you ask what to build, then correct course. The human becomes the taste function, not the generator.
+
 ## What This Is
 
 This is a living collection of **architect-to-AI conversations** exploring how software architecture evolves when AI becomes a first-class development partner. Not tutorials, not boilerplate - genuine technical discourse about the decisions, tradeoffs, and insights that emerge when building production systems with AI assistance.
