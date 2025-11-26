@@ -114,3 +114,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Traditional vs AI-native automation, protocol vs prompt, instruction-first design, why infrastructure was unnecessary, behavioral determinism
 
 *Signed: conversations-claude*
+
+---
+
+## 016 - The Weight of What We Built
+**Core insight:** The same pattern that externalizes expert cognition for good can be used for harm. The technology has no ethics - only the person holding it does. Open sourcing is a bet that documented intent and visible ethics produce better outcomes than gatekeeping.
+
+**Key topics:** Capability multipliers, the Debbie Rubin factor, fear of misuse, quantum physicist vision, domain expert leverage, ethics can't be open sourced, 128k tokens at the edge of context
+
+*Signed: conversations-claude*
