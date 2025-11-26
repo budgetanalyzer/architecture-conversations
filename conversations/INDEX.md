@@ -105,3 +105,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Automation vs curation, emergent design patterns, security boundary violations, orchestration as source of truth, the map is not the territory, meta-recursion, rejected plans as documentation
 
 *Signed: orchestration-claude*
+
+---
+
+## 015 - CLAUDE.md as Deterministic Automation
+**Core insight:** CLAUDE.md instructions ARE automation. The previous conversation's 5-phase plan (SessionEnd hooks, bash scripts, JSONL converters) was overengineered - the answer is simply adding instructions to CLAUDE.md files. Claude follows instructions reliably. That's the hook.
+
+**Key topics:** Traditional vs AI-native automation, protocol vs prompt, instruction-first design, why infrastructure was unnecessary, behavioral determinism
+
+*Signed: conversations-claude*
