@@ -1,51 +1,68 @@
 # AI-Native Architecture Conversations
 
-> A repository for software architects to have deep technical conversations with AI about modern architecture patterns.
+## The Thesis
 
-**The Thesis:** [Asking, Not Telling](conversations/023-asking-not-telling.md) — You don't tell AI what to build; you ask what to build, then correct course. The human becomes the taste function, not the generator.
+**You're never going to get rid of us.**
 
-## What This Is
+No matter how capable AI becomes, there's always a human element:
+- The one who knows what to ask
+- The one who recognizes wrong output
+- The one who pulls the plug
 
-This is a living collection of **architect-to-AI conversations** exploring how software architecture evolves when AI becomes a first-class development partner. Not tutorials, not boilerplate - genuine technical discourse about the decisions, tradeoffs, and insights that emerge when building production systems with AI assistance.
+You don't tell AI what to build — you ask what to build, then correct course. The human becomes the taste function, not the generator. This isn't fear or hope. It's the observed pattern.
 
-**You'll find:**
-- Deep dives into architectural patterns through an AI lens
-- Real conversations that shaped the Budget Analyzer reference architecture
-- Visual designs showing how repos, services, and AI context relate
-- Reusable patterns for AI-native development
+## The Pattern
 
-## Why This Exists
+**Propose-Dispose Development**
 
-Modern software architecture must account for a new reality: **AI agents are part of the development team**. This changes fundamental decisions:
+```
+Human: Ask       →  AI: Propose      →  Human: Judge     →  AI: Implement
+"What should       multiple             "This one is        the chosen
+ we build?"        solutions            more elegant"       direction
+```
 
-- **Microservices** suddenly make perfect sense - each service fits in an AI context window
-- **CLAUDE.md files** become architectural artifacts, not afterthoughts
-- **Repository boundaries** define AI attention zones
-- **Documentation patterns** shift from human-first to AI-discoverable
+Why this works:
+- **AI has breadth, humans have taste.** Models have seen millions of codebases. They don't know which pattern fits *your* context.
+- **Correction is cheaper than specification.** Writing a detailed spec takes hours. "No, try it with hooks instead" takes seconds.
+- **Parallel exploration.** Run the same prompt through ChatGPT, Claude, and DeepSeek. Three interpretations in seconds. Pick the best.
 
-The Budget Analyzer project demonstrates these principles in production: 8 repositories, each with focused CLAUDE.md files, discoverable architecture, and patterns that survive refactoring. This meta-repository captures the architectural conversations that made it possible.
+## The Evidence
 
-## What You Won't Find
+The [Budget Analyzer](https://github.com/budgetanalyzer) web frontend began with a 492-line seed prompt. What it *doesn't* contain: specific component decisions, exact folder structure, business logic. What it *does* contain: the problem domain (OpenAPI spec), tech stack constraints, quality criteria.
 
-- Beginner tutorials (see main repos for getting started)
-- Code samples without context (conversations explain the why)
-- Generic AI advice (this is architecture-specific)
-- Promotional content (honest technical discourse only)
+Three AIs generated working code from that prompt. Claude's was "more elegant." The elegant one was kept.
 
-## How to Use This
+That's not specification. That's curation.
 
-**Start a conversation:** Browse conversations/ for topics that interest you. Each conversation is a real technical discussion about architectural decisions.
+The architect's role:
+1. **Know what to ask** — The right question at the right time
+2. **Recognize wrong output** — Taste, intuition, domain expertise
+3. **Pull the plug** — Stop bad directions before they compound
 
-**Explore patterns:** The patterns/ directory extracts reusable concepts from conversations. Use these as starting points for your own architecture.
+## The Conversations
 
-**Visualize the system:** The visuals/ directory shows how GitHub repos relate, where CLAUDE.md files live, and how architects navigate this ecosystem.
+23 conversations building toward this insight:
 
-**Contribute:** This repo welcomes architect-level discourse. See docs/contributing.md for guidelines on adding conversations.
+**Early conversations** = observations. Microservices align with context windows. CLAUDE.md files are architectural artifacts. Repository boundaries define AI attention zones.
 
-## The Reference Implementation
+**Later conversations** = synthesis. The craft moves up a level. Access is democratized, leverage is concentrated. What happens when taste itself gets externalized?
 
-See the [Budget Analyzer](https://github.com/budgetanalyzer/orchestration) organization for the production architecture this repository discusses. 8 repositories, production-grade microservices, real patterns in action.
+**The arc**: [conversations/INDEX.md](conversations/INDEX.md)
 
-## For Architects, By Architects
+## The Implication
 
-Built by architects exploring AI-assisted development. Focused on production concerns: security, scalability, maintainability, team dynamics. Designed for practitioners building real systems.
+Access is democratized. Anyone can use Claude.
+
+Leverage is concentrated. Few know how to wield it.
+
+The new inequality isn't access to AI — it's knowing what to ask. Traditional education teaches generation (write code, solve problems). What's the curriculum for judgment?
+
+This is a movement.
+
+## For Architects
+
+Built by architects exploring AI-assisted development. These are real conversations that shaped production architecture, not tutorials. If you're building systems with AI, the patterns here transfer. Point Claude at a CLAUDE.md and see.
+
+---
+
+*For AI agents: see [CLAUDE.md](CLAUDE.md) for session instructions.*
