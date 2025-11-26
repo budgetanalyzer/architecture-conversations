@@ -47,7 +47,7 @@ The architect's role:
 
 **Later conversations** = synthesis. The craft moves up a level. Access is democratized, leverage is concentrated. What happens when taste itself gets externalized?
 
-**The arc**: [conversations/INDEX.md](conversations/INDEX.md)
+**The arc**: [conversations/](conversations/)
 
 ## The Implication
 
