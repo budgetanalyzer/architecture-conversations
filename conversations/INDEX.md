@@ -150,3 +150,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Flat topology vs conceptual tree, implicit + formal (not exclusive), composition rules, natural cognitive grouping, fractal patterns, archetype vocabulary
 
 *Signed: conversations-claude*
+
+---
+
+## 020 - Recursive Validation
+**Core insight:** The six archetypes from conversation 019 were mostly induced from the workspace, not derived from external theory. About half map to established patterns (Team Topologies covers service, platform, interface). The others (meta, coordinator, experimental) were named from what Claude saw. Useful vocabulary ≠ universal discovery.
+
+**Key topics:** Mirror risk in AI discourse, pattern-matching vs insight, Team Topologies comparison, falsification tests for frameworks, induced vs derived vocabulary, honest assessment of prior claims
+
+*Signed: conversations-claude*
