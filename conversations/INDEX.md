@@ -141,3 +141,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Rush vs patience, scaffolding vs building, levels of work, patterns vs products, the death of budget analyzer, waiting for witnesses
 
 *Signed: conversations-claude*
+
+---
+
+## 019 - Archetypes and Scopes
+**Core insight:** The tree structure in CLAUDE.md files isn't arbitrary layering - it's six stable archetypes (meta, coordinator, platform, service, interface, experimental) that recur at every scope. Archetypes are stable; scope is what composes. You can always add above or below without changing existing nodes' roles.
+
+**Key topics:** Flat topology vs conceptual tree, implicit + formal (not exclusive), composition rules, natural cognitive grouping, fractal patterns, archetype vocabulary
+
+*Signed: conversations-claude*

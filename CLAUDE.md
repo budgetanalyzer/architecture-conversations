@@ -207,3 +207,7 @@ When discussing a specific service:
 This CLAUDE.md is written for AI agents. For human-readable overview, see [README.md](README.md).
 
 For contributing guidelines, see [docs/contributing.md](docs/contributing.md).
+
+## Conversation Capture
+
+When the user asks to save this conversation, write it to `/workspace/architecture-conversations/conversations/` following the format in INDEX.md.
