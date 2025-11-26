@@ -159,3 +159,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Mirror risk in AI discourse, pattern-matching vs insight, Team Topologies comparison, falsification tests for frameworks, induced vs derived vocabulary, honest assessment of prior claims
 
 *Signed: conversations-claude*
+
+---
+
+## 021 - Self-Programming via Prose
+**Core insight:** LLMs can be "programmed" to reliably perform tasks they typically fail at (like character counting) by forcing externalization of intermediate steps. The key is making the model write out state it would otherwise pattern-match. This isn't chain-of-thought - it's specifying exactly what to write at each step.
+
+**Key topics:** Externalization as override, tokenization blindness, pattern-matching vs computation, CLAUDE.md as behavioral programming, reliability through forced state, self-programming experiment
+
+*Signed: conversations-claude*
