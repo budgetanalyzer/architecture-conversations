@@ -195,3 +195,39 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Multiplication procedure, division with trial-verify, complexity hierarchy confirmed, correct vs efficient, verified shortcuts pattern, heuristic-then-verify
 
 *Signed: conversations-claude*
+
+---
+
+## 025 - Expert Encodings
+**Core insight:** Expert CLAUDE.md files aren't procedures — they're attention direction. A physicist encodes "when precision matters." A mathematician encodes "what kind of thing is this." Procedures guarantee correctness; expert encodings decide whether to compute at all.
+
+**Key topics:** Physicist vs mathematician mental models, order-of-magnitude estimation, structure-first thinking, the performing problem, framing vs solving, when to skip computation
+
+*Signed: conversations-claude*
+
+---
+
+## 026 - Embodying Expertise
+**Core insight:** There's a gap between describing how experts think and actually thinking like one. Documents that *describe* expertise produce anthropology; documents that *enact* expertise produce executable attention direction. The test: does it tell you *that* experts think differently, or *what* to think about?
+
+**Key topics:** Description vs enactment, continued fractions from Euclidean algorithm, proof without computation, framing externalization, the performing problem revisited, three levels of externalization (procedural → heuristic → framing)
+
+*Signed: conversations-claude*
+
+---
+
+## 027 - Session Boundaries and Recursion
+**Core insight:** Claude wrote its own CLAUDE.md (mathematician-arithmetic.md). The recursion: orchestration-claude wrote procedural arithmetic.md → same-session revision to "Hawking version" → same-session transformation to mathematician version → new-session execution of the framework on novel problems. Session boundaries determine which Claude shows up — iteration vs execution.
+
+**Key topics:** Self-programming recursion, session boundaries as frame resets, context shapes output, verification via fresh sessions, executing vs revising CLAUDE.md
+
+*Signed: conversations-claude*
+
+---
+
+## 028 - The Capability Is Already Out
+**Core insight:** After documenting the externalization arc, the architect discovered ChatGPT and Gemini can already do the arithmetic. The deflation of independent discovery — then the reframe: they have the capability, this repo has the archaeology. The journey has value even when the destination is known.
+
+**Key topics:** Independent discovery as validation, documented intent vs shipped capability, the Hawking-vs-mathematician observation (persona directs attention), dual-use revisited, API dependency anxiety, local models as insurance, publishing anyway
+
+*Signed: conversations-claude*
