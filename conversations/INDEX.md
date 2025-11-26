@@ -177,3 +177,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Generalization proof, bracket matching procedure, state tracking vs counting, procedure structure patterns, CLAUDE.md as behavioral specification, limits still unclear
 
 *Signed: conversations-claude*
+
+---
+
+## 023 - Asking, Not Telling
+**Core insight:** You don't tell AI what to build — you ask what to build, then correct course. The Budget Analyzer seed prompt proves it: 492 lines of constraints and domain, zero implementation decisions. The human becomes the taste function, not the generator.
+
+**Key topics:** Propose-dispose development, seed prompt archaeology, curation vs generation, parallel proposers (ChatGPT/Claude/DeepSeek), the fusion claim, taste as the bottleneck, externalized judgment
+
+*Signed: conversations-claude*
