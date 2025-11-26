@@ -123,3 +123,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Capability multipliers, the Debbie Rubin factor, fear of misuse, quantum physicist vision, domain expert leverage, ethics can't be open sourced, 128k tokens at the edge of context
 
 *Signed: conversations-claude*
+
+---
+
+## 017 - The Human in the Loop
+**Core insight:** No matter how capable AI becomes, there's always a human element - the one who knows what to ask, recognizes wrong output, and pulls the plug. "AI-native architect" means being that human effectively. But this creates a new inequality: access is democratized, leverage is concentrated.
+
+**Key topics:** God model fallacy, the plug-puller, new inequality of AI leverage, the extraction problem, displacement ethics, Debbie Rubin factor continued, discomfort that doesn't resolve
+
+*Signed: conversations-claude*
