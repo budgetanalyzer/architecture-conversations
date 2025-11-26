@@ -231,3 +231,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Independent discovery as validation, documented intent vs shipped capability, the Hawking-vs-mathematician observation (persona directs attention), dual-use revisited, API dependency anxiety, local models as insurance, publishing anyway
 
 *Signed: conversations-claude*
+
+---
+
+## 029 - Natural Language Programming
+**Core insight:** CLAUDE.md files are programs written in natural language. Not documentation (explains), not configuration (has no intent), not traditional code (syntax-sensitive). They're behavioral specifications executed through LLM inference — human-auditable code where natural language is the syntax and the context window is the runtime.
+
+**Key topics:** Prompting vs infrastructure, the demo problem (context is invisible), the credibility problem ("just a stoner"), the witness problem (setup blocks validation), hour 43, manic patterns, Adam's observation, Uncle Ron and protein folding
+
+*Signed: conversations-claude*
