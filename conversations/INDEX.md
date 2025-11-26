@@ -168,3 +168,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Externalization as override, tokenization blindness, pattern-matching vs computation, CLAUDE.md as behavioral programming, reliability through forced state, self-programming experiment
 
 *Signed: conversations-claude*
+
+---
+
+## 022 - Generalizing Externalization
+**Core insight:** Forced externalization generalizes beyond character counting. The same pattern fixes bracket matching — a structurally different task requiring state tracking. Any task where the failure mode is pattern-matching instead of step-by-step processing can be corrected by forcing the model to write intermediate state.
+
+**Key topics:** Generalization proof, bracket matching procedure, state tracking vs counting, procedure structure patterns, CLAUDE.md as behavioral specification, limits still unclear
+
+*Signed: conversations-claude*
