@@ -80,3 +80,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Core insight:** Most AI architecture insights are "obvious in retrospect" - good practice, not breakthrough innovation. Value emerges when abstract ideas hit concrete constraints (like the trust boundary for web-accessible CLAUDE.md files).
 
 **Key topics:** Honest pushback vs glazing, declarative vs imperative CLAUDE.md for web, memory layer theory (training/index/context), hallucinations as prediction errors, phones as prosthetic bodies, sandbox patterns, context degradation, compound returns question
+
+---
+
+## 012 - Recursive Design and the Wormhole
+**Core insight:** AI participating in design conversations about AI-assisted development creates a recursive loop where the observer is part of the system. This surfaced a security vulnerability: Docker socket wormhole enables container escape even with read-only config mounts.
+
+**Key topics:** Recursive design loop, multi-repo commit coordination, SSH agent forwarding for GitHub write access, Docker socket security vulnerability, determinism through constraint, autonomy spectrum
+
+*Signed: conversations-claude*
