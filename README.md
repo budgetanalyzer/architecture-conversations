@@ -8,6 +8,7 @@ LLMs reliably fail at certain tasks — character counting, bracket matching. Kn
 
 - [021](conversations/021-self-programming-via-prose.md): Character counting — 100% accuracy via forced externalization
 - [022](conversations/022-generalizing-externalization.md): Bracket matching — same technique, different task. 10/10
+- [024](conversations/024-arithmetic-externalization.md): Multi-digit arithmetic — multiplication, division with full traces
 
 The method: force the model to write intermediate state. If it has to write each step, it can't skip to a wrong answer. CLAUDE.md files aren't just context — they're programs written in prose.
 

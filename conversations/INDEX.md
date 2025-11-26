@@ -186,3 +186,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Propose-dispose development, seed prompt archaeology, curation vs generation, parallel proposers (ChatGPT/Claude/DeepSeek), the fusion claim, taste as the bottleneck, externalized judgment
 
 *Signed: conversations-claude*
+
+---
+
+## 024 - Arithmetic Externalization
+**Core insight:** Forced externalization scales to multi-digit arithmetic — O(n×m) complexity with interacting state (carries, borrows, partial products). The procedure is brute-force but correct; the next frontier is encoding mathematical intuition, not just mechanical procedures.
+
+**Key topics:** Multiplication procedure, division with trial-verify, complexity hierarchy confirmed, correct vs efficient, verified shortcuts pattern, heuristic-then-verify
+
+*Signed: conversations-claude*
