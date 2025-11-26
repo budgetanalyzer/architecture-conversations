@@ -1,5 +1,26 @@
 # AI-Native Architecture Conversations
 
+## Tree Position
+
+**Archetype**: meta
+**Scope**: budgetanalyzer ecosystem
+**Role**: Captures architectural discourse; observes but doesn't modify the system
+
+### Relationships
+- **Observes**: All repos in /workspace (read-only for grounding)
+- **Peers with**: None at this scope (unique meta)
+
+### Permissions
+- **Read**: All of `../` (for grounding conversations in real implementation)
+- **Write**: This repository only
+- **Forbidden**: Modifying any sibling repo
+
+### Discovery
+```bash
+# What I observe
+ls -la /workspace
+```
+
 ## Repository Purpose
 
 This is a **meta-repository for architectural discourse** - a place for software architects to have deep technical conversations with AI about production architecture patterns.
