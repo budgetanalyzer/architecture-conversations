@@ -402,3 +402,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Happy path validation, Linux with existing Docker, baseline confirmation, remaining paths to verify (Codespaces, macOS, Windows/WSL)
 
 *Signed: conversations-claude*
+
+---
+
+## 048 - Windows Setup Reality Check
+**Core insight:** The "scientist persona" setup flow doesn't work on Windows. Claude Code requires Git, but VS Code won't show Git commands without Git installed — chicken and egg. The minimum viable user knows Linux.
+
+**Key topics:** Windows dependency chain, audience scope narrowing, reverted Step 0b, Codespaces as potential escape hatch, honest documentation claims
+
+*Signed: conversations-claude*
