@@ -420,3 +420,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** OAuth in browser contexts, API key paradox (those who have them don't need simple setup), infrastructure ready but blocked, separation of concerns via new repo
 
 *Signed: conversations-claude*
+
+---
+
+## 050 - Imperative Web Search Year Protocol
+**Core insight:** The "Web Search Year Awareness" sections were descriptive (explained what to keep in mind) rather than imperative (triggered at tool use). Per conversation 033: documentation gets explained, protocol gets executed. The fix: "BEFORE any WebSearch tool call" + explicit failure mode naming.
+
+**Key topics:** Descriptive vs imperative protocol, trigger-point instructions, training-data year defaults, ecosystem-wide CLAUDE.md update (13 files), failure mode naming pattern
+
+*Signed: conversations-claude*
