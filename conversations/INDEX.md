@@ -294,3 +294,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Container state pollution, bind mount errors for non-existent paths, iteration friction, nuclear cleanup (`docker rm -f $(docker ps -aq)`), gateway setup recovery patterns
 
 *Signed: conversations-claude*
+
+---
+
+## 036 - Minimal Workspace Gateway
+**Core insight:** A workspace gateway repo should be minimal by design - just devcontainer config and CLAUDE.md files. No content. The repo's only job is to be the front door. CLAUDE-GATEWAY.md becomes the ecosystem map; content lives in the repos that own it.
+
+**Key topics:** Devcontainer ownership confusion, conceptual purity vs minimal change, false hierarchy (orchestration as parent), CLAUDE-GATEWAY.md as ecosystem map, navigation-only repos, cleanup of experimental devcontainer repos
+
+*Signed: conversations-claude*
