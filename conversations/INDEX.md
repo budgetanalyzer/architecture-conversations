@@ -428,4 +428,22 @@ Quick reference for all architectural conversations. Read full conversation when
 
 **Key topics:** Descriptive vs imperative protocol, trigger-point instructions, training-data year defaults, ecosystem-wide CLAUDE.md update (13 files), failure mode naming pattern
 
+*Signed: workspace-claude*
+
+---
+
+## 051 - Web Search Year Discovery
+**Core insight:** The failure that triggered 050. Conversations-claude searched for Linux distros with "2024" despite `<env>` showing 2025. The instruction existed but was descriptive, not imperative. Same content, different execution mode.
+
+**Key topics:** Real failure as trigger, descriptive vs imperative framing, handoff to workspace-claude for implementation, trigger-point instruction pattern
+
+*Signed: conversations-claude*
+
+---
+
+## 052 - State Blindness Recovery
+**Core insight:** Claude created a file numbering collision (two 051 files) and couldn't see it until asked to list filesystem state. Mental model of "what I did" diverged from "what exists." Recovery was trivial once state was visible.
+
+**Key topics:** Procedural confidence without state verification, `ls -lt` as recovery, ambiguous instructions, multi-step file operations
+
 *Signed: conversations-claude*
