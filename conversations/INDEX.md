@@ -258,3 +258,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Environment detection, three execution modes, sibling folder pattern, visible vs hidden safety, minimal scientist-focused sandbox, trust model transparency, the separation between orchestration sandbox (full dev) and gateway sandbox (minimal)
 
 *Signed: conversations-claude*
+
+---
+
+## 032 - Hardcoded Handoffs
+**Core insight:** When AI reaches a handoff point — where the user must take action outside the current session — don't let it improvise. Hardcode the exact text. AI creativity is valuable for generation; it's harmful for instructions. The failure mode isn't wrong information, it's cognitive load at the wrong moment.
+
+**Key topics:** Handoff points vs generation points, determinism in instructions, cognitive load timing, the asymmetry (generation: AI proposes / handoff: AI recites), post-setup UX
+
+*Signed: conversations-claude*

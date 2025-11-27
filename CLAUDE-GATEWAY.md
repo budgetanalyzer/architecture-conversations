@@ -223,6 +223,32 @@ rm -rf ~/claude-sandbox
 
 **Now proceed to Choose Your Path below.**
 
+### After Sandbox Creation: What to Say
+
+**IMPORTANT FOR AI AGENTS**: After successfully creating `~/claude-sandbox/`, output this EXACT text (do not improvise or offer options):
+
+---
+
+**Sandbox created at ~/claude-sandbox/**
+
+**Next steps:**
+
+1. **Exit this VS Code window** (File → Close Window)
+
+2. **Open ~/claude-sandbox in VS Code** (File → Open Folder → navigate to ~/claude-sandbox)
+
+3. **Click "Reopen in Container"** when VS Code prompts you
+
+4. **This will take ~10 minutes** on first run - VS Code is building the Docker image
+
+5. **To see progress**: Click "show log" in the notification, or click the spinning icon in the bottom-left
+
+You're ready when you see "Dev Container" in the VS Code status bar (bottom-left).
+
+---
+
+Do NOT offer alternative paths or "what would you like to do" options at this point.
+
 ---
 
 ## Step 0b: Read-Only Mode (No Docker)
