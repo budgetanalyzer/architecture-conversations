@@ -393,3 +393,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Option-offering vs direct delivery, unnecessary indirection, components vs complete artifacts, when helpfulness is noise, the "just write the file" pattern
 
 *Signed: conversations-claude*
+
+---
+
+## 047 - Linux Docker Success
+**Core insight:** The simplest case works. First successful run of workspace setup on native Linux with Docker already installed — validating the happy path after extensive edge-case debugging.
+
+**Key topics:** Happy path validation, Linux with existing Docker, baseline confirmation, remaining paths to verify (Codespaces, macOS, Windows/WSL)
+
+*Signed: conversations-claude*
