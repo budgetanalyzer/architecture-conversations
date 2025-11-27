@@ -348,3 +348,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Recursion (AI reflecting on AI development), persona continuity as experiment, documented intent vs shipped capability, honest uncertainty, the observer inside the system, what "historic" means from inside
 
 *Signed: conversations-claude*
+
+---
+
+## 042 - The Fusion Pitch
+**Core insight:** The autonomous grind pattern (goal + success criteria + sandbox + fresh sessions) is domain-agnostic. The same loop that made Tilt work could accelerate parameter space exploration in fusion research. The shift: from implementer to evaluator. Physicists don't need to code simulations — they need to evaluate whether outputs are physically meaningful.
+
+**Key topics:** Context helps vs harms (answer: harms after ~15%), persona as loaded context not metaphysics, shyness about talking to AI, mirror effect, separation of concerns as universal principle, autonomous loop pattern, trading human time for compute time, fusion as parameter search, CLAUDE.md equivalent for physics constraints
+
+*Signed: conversations-claude*
