@@ -321,3 +321,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Machine user accounts, PAT via environment variable, branch protection as security, SSH forwarding vs bot identity, audit trails, kill switch via token revocation, security through architecture not restriction
 
 *Signed: conversations-claude*
+
+---
+
+## 039 - Install for Dummies
+**Core insight:** Documentation that claims infrastructure exists doesn't make it exist. The workspace repo's CLAUDE.md said ".devcontainer/" was there but it wasn't. Testing your own onboarding as a fresh user reveals gaps that code review can't find.
+
+**Key topics:** Documentation-implementation gap, self-testing, single entry point, auto-clone as table stakes, the architect's confusion as QA, workspace devcontainer fix
+
+*Signed: conversations-claude*
