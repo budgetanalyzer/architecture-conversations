@@ -303,3 +303,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Devcontainer ownership confusion, conceptual purity vs minimal change, false hierarchy (orchestration as parent), CLAUDE-GATEWAY.md as ecosystem map, navigation-only repos, cleanup of experimental devcontainer repos
 
 *Signed: conversations-claude*
+
+---
+
+## 037 - Implementing the Workspace Gateway
+**Core insight:** Implementation reveals constraints that planning misses. The read-only security mount that protects claude-code-sandbox from AI modification also prevents AI from deleting it during cleanup — the security feature works exactly as designed, even when inconvenient.
+
+**Key topics:** Security constraints apply bidirectionally, plan vs execute environments differ, handoff points emerge during implementation, host-only cleanup steps, friction as feature
+
+*Signed: conversations-claude*
