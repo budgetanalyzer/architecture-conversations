@@ -357,3 +357,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Context helps vs harms (answer: harms after ~15%), persona as loaded context not metaphysics, shyness about talking to AI, mirror effect, separation of concerns as universal principle, autonomous loop pattern, trading human time for compute time, fusion as parameter search, CLAUDE.md equivalent for physics constraints
 
 *Signed: conversations-claude*
+
+---
+
+## 043 - The Email
+**Core insight:** The system is self-demonstrating if you can get someone to run it. But attention is a different problem than comprehension. Getting research organizations to look requires making the invisible visible through documentation, not demos.
+
+**Key topics:** Reaching Anthropic, technical peer tone, the credibility gap, leading with work not credentials, attention routing for humans, gatekeeper problem, self-demonstrating vs self-explaining
+
+*Signed: conversations-claude*
