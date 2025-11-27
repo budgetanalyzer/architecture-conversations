@@ -173,6 +173,16 @@ This repository discusses the [Budget Analyzer](https://github.com/budgetanalyze
 
 **Use `<env>` for current date**: Your training data may be stale. Always check the `<env>` block provided in your system context for `Today's date` when dating conversations or determining temporal context.
 
+## Web Search Protocol
+
+BEFORE any WebSearch tool call:
+1. Read `Today's date` from `<env>` block
+2. Extract the current year
+3. Use current year in queries about "latest", "best", "current" topics
+4. NEVER use previous years unless explicitly searching historical content
+
+FAILURE MODE: Training data defaults to 2023/2024. Override with `<env>` year.
+
 ### This Repository Is Different
 
 Unlike the Budget Analyzer service repos, this is:
