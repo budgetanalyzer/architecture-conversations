@@ -119,6 +119,7 @@ This repository discusses the [Budget Analyzer](https://github.com/budgetanalyze
 **Workspace structure** (all repos cloned side-by-side):
 ```
 /workspace/
+├── workspace/                  # Devcontainer entry point (clone this first)
 ├── orchestration/              # System coordination (this provides context)
 ├── service-common/             # Shared Spring Boot patterns
 ├── transaction-service/        # Microservice example
@@ -127,7 +128,9 @@ This repository discusses the [Budget Analyzer](https://github.com/budgetanalyze
 ├── token-validation-service/   # JWT validation
 ├── session-gateway/            # BFF for browser security
 ├── budget-analyzer-web/        # React frontend
-└── architecture-conversations/ # This repo
+├── architecture-conversations/ # This repo
+├── checkstyle-config/          # Shared checkstyle rules
+└── claude-discovery/           # Experimental discovery tool
 ```
 
 **Each service has**:

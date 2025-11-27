@@ -375,3 +375,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Credential filters vs capability demonstration, routing to humans vs routing to AI, sales channel as partnership channel, UChicago/BFI precedent for external research, LinkedIn as less-filtered alternative, documenting the outreach attempt
 
 *Signed: conversations-claude*
+
+---
+
+## 045 - Documentation Sync Refactor
+**Core insight:** Refactoring documentation across a multi-repo ecosystem is trivial when you describe the outcome and let AI find the discrepancies. Human states intent ("verify docs are in sync"), AI finds gaps, human resolves ambiguity ("delete the gateway file"), AI executes. The entire refactor: 6 files updated, 1 deleted, ~100 words of human direction.
+
+**Key topics:** Verification as prompt, source of truth discovery, human as gap-spotter not gap-fixer, redirecting AI attention vs fixing problems, documentation sync as trivial task
+
+*Signed: conversations-claude*
