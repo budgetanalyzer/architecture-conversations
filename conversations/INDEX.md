@@ -411,3 +411,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Windows dependency chain, audience scope narrowing, reverted Step 0b, Codespaces as potential escape hatch, honest documentation claims
 
 *Signed: conversations-claude*
+
+---
+
+## 049 - Codespaces OAuth Wall
+**Core insight:** Codespaces solves every setup problem except authentication. Claude Code OAuth doesn't work in browser-based VS Code — the wall just moved from "install Git" to "OAuth needs a real browser context." The conversations-codespace repo exists but isn't promoted until auth is fixed.
+
+**Key topics:** OAuth in browser contexts, API key paradox (those who have them don't need simple setup), infrastructure ready but blocked, separation of concerns via new repo
+
+*Signed: conversations-claude*
