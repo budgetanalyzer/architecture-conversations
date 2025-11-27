@@ -1,0 +1,44 @@
+# Claude Code Sandbox - Minimal Configuration
+#
+# This creates an isolated environment where Claude Code can safely execute.
+#
+# Security model:
+# - /workspace is read/write (your projects)
+# - /workspace/sandbox is read-only (this config - Claude cannot modify its own setup)
+#
+# Usage:
+#   1. Create .env file with your UID/GID (see setup instructions)
+#   2. docker compose up -d
+#   3. docker compose exec claude-sandbox bash
+#   4. Run 'claude' to start Claude Code
+
+services:
+  claude-sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERNAME: vscode
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+
+    volumes:
+      # Mount parent workspace directory (contains your projects)
+      - ../workspace:/workspace:cached
+
+      # Mount this sandbox config as read-only (security: Claude cannot modify its own config)
+      - .:/workspace/sandbox:ro
+
+      # Persistent storage for Claude Code credentials
+      - claude-anthropic:/home/vscode/.anthropic
+
+    # Use host network for simplicity
+    network_mode: host
+
+    # Keep container running
+    command: sleep infinity
+
+    user: vscode
+
+volumes:
+  claude-anthropic:

@@ -249,3 +249,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** URI-loadable entry points, fractal optionality, active generation protocols, setup inversion (understand → decide → clone vs clone → configure → understand), curated vs comprehensive references
 
 *Signed: conversations-claude*
+
+---
+
+## 031 - Sandbox Bootstrapping
+**Core insight:** AI execution is only safe in a sandboxed environment. The gateway file needs environment detection (devcontainer → proceed, Docker → bootstrap sandbox, nothing → read-only mode). For scientists new to AI development, safety must be *visible* — prose instructions instead of magic scripts, inspectable files, explicit trust warnings about AI-enforced vs system-enforced constraints.
+
+**Key topics:** Environment detection, three execution modes, sibling folder pattern, visible vs hidden safety, minimal scientist-focused sandbox, trust model transparency, the separation between orchestration sandbox (full dev) and gateway sandbox (minimal)
+
+*Signed: conversations-claude*
