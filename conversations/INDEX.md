@@ -447,3 +447,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Procedural confidence without state verification, `ls -lt` as recovery, ambiguous instructions, multi-step file operations
 
 *Signed: conversations-claude*
+
+---
+
+## 053 - Prompting Style Chemistry
+**Core insight:** CLAUDE.md files aren't neutral — they're tuned to complement the architect's interaction style. Imperative instructions emerged because the architect uses passive/curative prompting. The imperative scaffolding kicks in when the architect shifts from peer mode (exploring) to manager mode (directing).
+
+**Key topics:** Passive vs directive architect modes, complementary instruction styles, CLAUDE.md as cognitive extension, style-specific scaffolding, no universal template
+
+*Signed: conversations-claude*
