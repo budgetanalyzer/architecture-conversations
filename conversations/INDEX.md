@@ -240,3 +240,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Prompting vs infrastructure, the demo problem (context is invisible), the credibility problem ("just a stoner"), the witness problem (setup blocks validation), hour 43, manic patterns, Adam's observation, Uncle Ron and protein folding
 
 *Signed: conversations-claude*
+
+---
+
+## 030 - The Gateway Pattern
+**Core insight:** The fractal architecture has optional layers - only the middle (coordinator) is required, and only if you want the full system. A gateway file encodes this optionality: load a URI, choose your path (full install or greenfield generation), get started without complex setup.
+
+**Key topics:** URI-loadable entry points, fractal optionality, active generation protocols, setup inversion (understand → decide → clone vs clone → configure → understand), curated vs comprehensive references
+
+*Signed: conversations-claude*
