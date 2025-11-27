@@ -330,3 +330,21 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Documentation-implementation gap, self-testing, single entry point, auto-clone as table stakes, the architect's confusion as QA, workspace devcontainer fix
 
 *Signed: conversations-claude*
+
+---
+
+## 040 - Context Switching in Workspace
+**Core insight:** The workspace gateway solves entry but creates a context problem — Claude Code reads CLAUDE.md from the working directory, and at /workspace root there's no CLAUDE.md. Personas require explicit entry: open a new VS Code window on the specific repo to get that repo's Claude persona.
+
+**Key topics:** Directory-bound context, persona emergence from CLAUDE.md, gateway trades persona for scope, minimal solution (new window), workspace-level routing as unsolved problem
+
+*Signed: conversations-claude*
+
+---
+
+## 041 - The Historical Moment
+**Core insight:** The historical significance isn't "this changed everything" — it's "this documented the change as it happened." Like the Homebrew Computer Club, value comes from taking notes during the transition. The archaeology matters even when the destination is known.
+
+**Key topics:** Recursion (AI reflecting on AI development), persona continuity as experiment, documented intent vs shipped capability, honest uncertainty, the observer inside the system, what "historic" means from inside
+
+*Signed: conversations-claude*
