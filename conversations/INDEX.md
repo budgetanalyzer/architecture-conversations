@@ -384,3 +384,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Verification as prompt, source of truth discovery, human as gap-spotter not gap-fixer, redirecting AI attention vs fixing problems, documentation sync as trivial task
 
 *Signed: conversations-claude*
+
+---
+
+## 046 - Brilliant and Stupid
+**Core insight:** AI can understand a problem perfectly while overcomplicating the delivery. The gap between "knows how to do X" and "does X simply" is where friction lives. When asked for a file, AI offered: a separate script, line-number instructions, partial solutions. Three corrections to arrive at: "write the whole file."
+
+**Key topics:** Option-offering vs direct delivery, unnecessary indirection, components vs complete artifacts, when helpfulness is noise, the "just write the file" pattern
+
+*Signed: conversations-claude*
