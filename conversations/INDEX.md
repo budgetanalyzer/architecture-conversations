@@ -312,3 +312,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Security constraints apply bidirectionally, plan vs execute environments differ, handoff points emerge during implementation, host-only cleanup steps, friction as feature
 
 *Signed: conversations-claude*
+
+---
+
+## 038 - Git Authentication for AI Agents
+**Core insight:** Branch protection is the security model, not access restriction. If AI can't push to main and can't merge without review, giving it push access to feature branches costs nothing and enables full autonomous workflow. The friction of manual commits was protecting against a risk that GitHub already mitigates.
+
+**Key topics:** Machine user accounts, PAT via environment variable, branch protection as security, SSH forwarding vs bot identity, audit trails, kill switch via token revocation, security through architecture not restriction
+
+*Signed: conversations-claude*
