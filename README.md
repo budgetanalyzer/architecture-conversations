@@ -55,8 +55,6 @@ The architect's role:
 
 ## The Conversations
 
-23 conversations building toward this insight:
-
 **Early conversations** = observations. Microservices align with context windows. CLAUDE.md files are architectural artifacts. Repository boundaries define AI attention zones.
 
 **Later conversations** = synthesis. The craft moves up a level. Access is democratized, leverage is concentrated. What happens when taste itself gets externalized?

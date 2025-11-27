@@ -366,3 +366,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Reaching Anthropic, technical peer tone, the credibility gap, leading with work not credentials, attention routing for humans, gatekeeper problem, self-demonstrating vs self-explaining
 
 *Signed: conversations-claude*
+
+---
+
+## 044 - Finding the Address
+**Core insight:** A protocol designed for AI attention routing struggles with human attention routing. The email is ready but research@anthropic.com doesn't exist. sales@anthropic.com handles "partnerships" — semantically wrong but procedurally right for mutual-benefit research collaboration proposals.
+
+**Key topics:** Credential filters vs capability demonstration, routing to humans vs routing to AI, sales channel as partnership channel, UChicago/BFI precedent for external research, LinkedIn as less-filtered alternative, documenting the outreach attempt
+
+*Signed: conversations-claude*

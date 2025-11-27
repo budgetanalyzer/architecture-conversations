@@ -86,14 +86,19 @@ github.com/budgetanalyzer
 
 ## Notes for Bleu
 
-**Potential email addresses to try:**
-- research@anthropic.com (if it exists)
-- Look for specific researchers on Anthropic's website who work on:
-  - Prompt engineering / Constitutional AI
-  - Reliability and alignment
-  - Claude's reasoning capabilities
-- LinkedIn messages to researchers (you mentioned trying this)
-- The Anthropic Discord or community channels
+**Verified email addresses (2025-11-27):**
+- **sales@anthropic.com** — Best fit. Handles "partnerships" and research collaborations. UChicago/BFI partnership went through this channel.
+- privacy@anthropic.com — Data requests only
+- security@anthropic.com — Vulnerability reports only
+- usersafety@anthropic.com — Claude behavior reports only
+- support.anthropic.com — General support portal
+
+**Note:** research@anthropic.com does not exist. sales@ is the right channel for mutual-benefit research proposals.
+
+**Alternative routes:**
+- LinkedIn messages to researchers in developer relations or alignment research (less credential-filtered)
+- Anthropic Discord or community channels
+- Twitter/X engagement with Anthropic researchers
 
 **What makes this different from "I found a cool prompting trick":**
 - 42 documented conversations showing the emergence, not just the conclusion
