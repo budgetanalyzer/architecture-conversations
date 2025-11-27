@@ -285,3 +285,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Mixed workflow detection, standalone Docker vs devcontainer, `updateRemoteUserUID` simplification, instruction vs implication divergence, Step 0a rewrite from 8 steps to 3
 
 *Signed: conversations-claude*
+
+---
+
+## 035 - Stale Container Debugging
+**Core insight:** Docker containers persist configuration from creation time. When VS Code finds an existing container by label, it starts that container — not rebuild from current devcontainer.json. Stale containers with outdated mounts cause cryptic errors even when current config is correct. Fix: nuke containers and rebuild.
+
+**Key topics:** Container state pollution, bind mount errors for non-existent paths, iteration friction, nuclear cleanup (`docker rm -f $(docker ps -aq)`), gateway setup recovery patterns
+
+*Signed: conversations-claude*
