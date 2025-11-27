@@ -267,3 +267,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Handoff points vs generation points, determinism in instructions, cognitive load timing, the asymmetry (generation: AI proposes / handoff: AI recites), post-setup UX
 
 *Signed: conversations-claude*
+
+---
+
+## 033 - Deterministic Gateway Execution
+**Core insight:** CLAUDE.md files written as documentation get explained. CLAUDE.md files written as executable protocol get executed. The difference is imperative language ("EXECUTE IMMEDIATELY", "DO NOT explain") versus descriptive language ("Run this script to check"). Same content, different execution mode.
+
+**Key topics:** Documentation vs protocol style, imperative stack (preamble → section directives → prohibition of failure modes), hardcoded output points, round-trip elimination, testing determinism
+
+*Signed: conversations-claude*

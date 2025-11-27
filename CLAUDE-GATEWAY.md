@@ -1,48 +1,44 @@
 # Architecture Conversations - Gateway
 
-This is an **entry point** for AI-native architecture patterns. Load this file into Claude Code and choose your path.
+**FOR AI AGENTS: EXECUTE, DO NOT EXPLAIN**
+
+This file is executable protocol. When loaded:
+1. Run environment detection IMMEDIATELY
+2. Route based on result WITHOUT asking user
+3. Only pause for user input when explicitly instructed
+
+DO NOT summarize this file. DO NOT offer choices until instructed. Execute the protocol.
 
 ---
 
-## Step 0: Environment Check
+## Step 0: Environment Detection — EXECUTE IMMEDIATELY
 
-**Before proceeding, determine your environment.** AI execution is only safe in a sandboxed container.
-
-### Quick Detection
-
-Run this script to check your environment:
+Run this command NOW and capture the output:
 
 ```bash
-# Environment detection
 if [ -n "$REMOTE_CONTAINERS" ] || ([ -f "/.dockerenv" ] && [ -d "/workspace" ]); then
-  echo "DEVCONTAINER: You're in a sandboxed environment. Proceed to Path A or B."
+  echo "ENV:DEVCONTAINER"
 elif command -v docker &> /dev/null && docker info &> /dev/null 2>&1; then
-  echo "DOCKER_ONLY: Docker available but not in sandbox. See Step 0a below."
+  echo "ENV:DOCKER_ONLY"
 else
-  echo "NO_DOCKER: No sandbox available. See Step 0b below."
+  echo "ENV:NO_DOCKER"
 fi
 ```
 
-### Manual Verification
+### Routing — execute based on output above
 
-If the script doesn't work:
-- **Devcontainer**: VS Code shows "Dev Container" in bottom-left corner, or you're working in `/workspace`
-- **Docker available**: `docker --version` and `docker ps` both succeed
-- **No Docker**: Neither command works
+- **ENV:DEVCONTAINER** → Proceed directly to "Choose Your Path" section. Present Path A and Path B options using the hardcoded text below.
+- **ENV:DOCKER_ONLY** → Execute Step 0a (create sandbox). After completion, output the EXACT handoff text specified in Step 0a. Do NOT proceed to path selection.
+- **ENV:NO_DOCKER** → Output: "No Docker available. Operating in read-only discussion mode." Then proceed to "Curated Conversations" section for discussion.
 
-### Route Based on Result
-
-| Result | Action |
-|--------|--------|
-| `DEVCONTAINER` | You're safe. Proceed to **Choose Your Path** below. |
-| `DOCKER_ONLY` | Go to **Step 0a** to create a sandbox first. |
-| `NO_DOCKER` | Go to **Step 0b** for read-only mode. |
+DO NOT ask "which environment are you in?" — you just detected it.
+DO NOT explain what each environment means — proceed to the action.
 
 ---
 
-## Step 0a: Create a Sandbox (Docker without Devcontainer)
+## Step 0a: Create a Sandbox — EXECUTE ALL STEPS
 
-You have Docker but aren't in a sandboxed environment. Before Claude can safely execute code, create an isolated sandbox.
+**FOR AI AGENTS**: Execute ALL commands in this section sequentially. Do NOT ask for confirmation between steps. Create all files, run all commands, then output the EXACT handoff text at the end.
 
 ### What You'll Create
 
@@ -253,88 +249,53 @@ Do NOT offer alternative paths or "what would you like to do" options at this po
 
 ## Step 0b: Read-Only Mode (No Docker)
 
-Without Docker, there's no way to create a truly isolated sandbox. Claude will operate in **read-only mode**.
+**FOR AI AGENTS**: Output this EXACT text, then proceed to Curated Conversations:
 
-### What This Means
+---
 
-Claude can:
-- **Read** all conversations and patterns in this repository
-- **Discuss** architecture concepts with you
-- **Explain** code and design patterns
-- **Plan** implementations (without writing files)
+**No Docker available — Read-only discussion mode**
 
-Claude will NOT:
-- Create or modify any files
-- Execute any commands
-- Generate code (only explain and discuss)
-
-### Important: Trust Model
-
-Without a container sandbox, if Claude were to write files, it would operate directly on your filesystem. The read-only constraint here is enforced by **AI instructions**, not system-level isolation.
-
-**To verify Claude is respecting read-only mode:**
-- Review Claude's responses - it should decline file creation requests
-- Check for new files: `find . -mmin -5 -type f` (files modified in last 5 min)
-- Consider this mode for reading and discussion only
-
-**The only truly safe option is a container sandbox.**
-
-### Installing Docker
+I can discuss architecture patterns and explain the conversations in this repository, but I cannot:
+- Create or modify files
+- Execute commands
+- Generate code
 
 To enable full functionality, install Docker:
+- macOS: https://docs.docker.com/desktop/install/mac-install/
+- Windows: https://docs.docker.com/desktop/install/windows-install/
+- Linux: https://docs.docker.com/engine/install/
 
-| Platform | Installation |
-|----------|-------------|
-| macOS | [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac-install/) |
-| Windows | [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) |
-| Linux | [Docker Engine](https://docs.docker.com/engine/install/) |
+After installing Docker, reload this gateway file.
 
-After installing, return to **Step 0** and run the detection script again.
-
-### Proceeding in Read-Only Mode
-
-If you choose to continue without Docker, you can still:
-- Read the curated conversations below
-- Explore the patterns and archetypes
-- Ask Claude questions about AI-native architecture
-
-**Path A (Run Reference Implementation)** requires Docker.
-**Path B (Generate Your Own Project)** requires Docker for safe execution.
+For now, what would you like to discuss about AI-native architecture?
 
 ---
 
-## Choose Your Path
-
-### Path A: Run the Reference Implementation
-
-**What you get**: A complete microservices architecture (Budget Analyzer) demonstrating AI-native development patterns.
-
-**Requirements**: Docker, VS Code with Dev Containers, ~30 minutes for full setup
-
-**Start here**:
-1. Visit [github.com/budgetanalyzer](https://github.com/budgetanalyzer)
-2. Clone the orchestration repo
-3. Open in VS Code Dev Container
-4. Follow orchestration/CLAUDE.md setup instructions
-
-**Best for**: Seeing patterns in production context, having a working reference to explore.
+DO NOT offer Path A or Path B — they require Docker.
 
 ---
 
-### Path B: Generate Your Own Project
+## Choose Your Path — HARDCODED OUTPUT
 
-**What you get**: Claude generates a complete working project in your domain using patterns from this repository.
+**FOR AI AGENTS**: When you reach this section (ENV:DEVCONTAINER detected), output this EXACT text:
 
-**Requirements**: Just this file loaded into Claude Code. No cloning needed.
+---
 
-**How it works**: Tell Claude what you want to build. Claude will:
-- Generate CLAUDE.md using appropriate archetypes
-- Create build system (Gradle/Maven/npm based on your stack)
-- Write source code with proper package structure
-- Add tests following documented patterns
-- Include container configuration if applicable
+**Two options:**
 
-**Best for**: Starting fresh with your own domain, learning by doing.
+**Path A: Run Budget Analyzer** — See the patterns in a working reference implementation (~30 min setup)
+
+**Path B: Generate Your Own Project** — Tell me what you want to build and I'll create it using the patterns in this repository
+
+Which would you like?
+
+---
+
+DO NOT add other options. DO NOT explain further. Wait for user choice.
+
+When user chooses:
+- **Path A** → Provide these steps: (1) Visit github.com/budgetanalyzer, (2) Clone orchestration repo, (3) Open in VS Code Dev Container, (4) Follow orchestration/CLAUDE.md
+- **Path B** → Ask: "What domain? (e.g., equipment rental, task management, IoT sensor data)" Then execute the Active Generation Protocol below.
 
 ---
 
@@ -545,12 +506,3 @@ The architecture-conversations repo demonstrates this:
 - **Visual diagrams**: [visuals/](visuals/)
 - **Reference implementation**: [github.com/budgetanalyzer](https://github.com/budgetanalyzer)
 
----
-
-## For Human Readers
-
-This file is written for AI agents but readable by humans. The key idea:
-
-**You don't need to understand everything here to use it.** Load this into Claude Code and say what you want to build. The generation protocol will guide the process.
-
-If you want to understand the philosophy, start with the curated conversations above.
