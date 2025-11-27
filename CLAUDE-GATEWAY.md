@@ -28,7 +28,7 @@ fi
 ### Routing — execute based on output above
 
 - **ENV:DEVCONTAINER** → Proceed directly to "Choose Your Path" section. Present Path A and Path B options using the hardcoded text below.
-- **ENV:DOCKER_ONLY** → Execute Step 0a (create sandbox). After completion, output the EXACT handoff text specified in Step 0a. Do NOT proceed to path selection.
+- **ENV:DOCKER_ONLY** → Execute Step 0a (create sandbox files only - do NOT run docker commands). After file creation, output the EXACT handoff text specified in Step 0a. Do NOT proceed to path selection.
 - **ENV:NO_DOCKER** → Output: "No Docker available. Operating in read-only discussion mode." Then proceed to "Curated Conversations" section for discussion.
 
 DO NOT ask "which environment are you in?" — you just detected it.
@@ -36,22 +36,18 @@ DO NOT explain what each environment means — proceed to the action.
 
 ---
 
-## Step 0a: Create a Sandbox — EXECUTE ALL STEPS
+## Step 0a: Create a Sandbox — EXECUTE FILE CREATION ONLY
 
-**FOR AI AGENTS**: Execute ALL commands in this section sequentially. Do NOT ask for confirmation between steps. Create all files, run all commands, then output the EXACT handoff text at the end.
+**FOR AI AGENTS**: Create ALL files in this section sequentially. Do NOT ask for confirmation between steps. Do NOT run any docker commands. After creating files, output the EXACT handoff text at the end.
 
 ### What You'll Create
 
 ```
 ~/claude-sandbox/
-├── workspace/                    # Your projects go here
-│   └── your-project/             # (you'll add this)
-├── sandbox/                      # Sandbox configuration
-│   ├── Dockerfile
-│   ├── docker-compose.yml
-│   ├── entrypoint.sh
-│   └── README.md
-└── .env                          # Your user ID (auto-generated)
+├── workspace/              # Your projects go here
+└── .devcontainer/          # VS Code devcontainer config
+    ├── devcontainer.json
+    └── Dockerfile
 ```
 
 ### Step-by-Step Instructions
@@ -60,25 +56,33 @@ DO NOT explain what each environment means — proceed to the action.
 
 ```bash
 mkdir -p ~/claude-sandbox/workspace
-mkdir -p ~/claude-sandbox/sandbox
+mkdir -p ~/claude-sandbox/.devcontainer
 ```
 
-**2. Create the .env file (captures your user ID for permissions):**
+**2. Create the devcontainer.json:**
 
-```bash
-cd ~/claude-sandbox/sandbox
-echo "USER_UID=$(id -u)" > .env
-echo "USER_GID=$(id -g)" >> .env
+Create `~/claude-sandbox/.devcontainer/devcontainer.json` with this content:
+
+```json
+{
+  "name": "Claude Code Sandbox",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/workspace,type=bind,consistency=cached",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true,
+  "postCreateCommand": "echo 'Claude Code Sandbox ready. Run: claude'"
+}
 ```
 
 **3. Create the Dockerfile:**
 
-Create `~/claude-sandbox/sandbox/Dockerfile` with this content:
+Create `~/claude-sandbox/.devcontainer/Dockerfile` with this content:
 
 ```dockerfile
-# Minimal Claude Code Sandbox
 FROM ubuntu:24.04
-
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
@@ -89,117 +93,22 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
-ARG USERNAME=vscode
-ARG USER_UID
-ARG USER_GID
-
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd --uid $USER_UID --gid $USER_GID -m -s /bin/bash $USERNAME \
-    && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+RUN useradd -m -s /bin/bash vscode \
+    && echo "vscode ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 RUN npm install -g @anthropic-ai/claude-code
 
-RUN mkdir -p /workspace && chown -R $USER_UID:$USER_GID /workspace
-RUN mkdir -p /home/$USERNAME/.anthropic && chown -R $USER_UID:$USER_GID /home/$USERNAME/.anthropic
+RUN mkdir -p /workspace && chown -R vscode:vscode /workspace
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
-USER $USERNAME
+USER vscode
 WORKDIR /workspace
-
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD ["/bin/bash"]
 ```
 
-**4. Create the docker-compose.yml:**
-
-Create `~/claude-sandbox/sandbox/docker-compose.yml` with this content:
-
-```yaml
-services:
-  claude-sandbox:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        USERNAME: vscode
-        USER_UID: ${USER_UID:-1000}
-        USER_GID: ${USER_GID:-1000}
-
-    volumes:
-      # Your projects (read/write)
-      - ../workspace:/workspace:cached
-      # This config (read-only - Claude cannot modify its own setup)
-      - .:/workspace/sandbox:ro
-      # Persistent credentials
-      - claude-anthropic:/home/vscode/.anthropic
-
-    network_mode: host
-    command: sleep infinity
-    user: vscode
-
-volumes:
-  claude-anthropic:
-```
-
-**5. Create the entrypoint.sh:**
-
-Create `~/claude-sandbox/sandbox/entrypoint.sh` with this content:
-
-```bash
-#!/bin/bash
-set -e
-
-sudo chown -R vscode:vscode /workspace 2>/dev/null || true
-
-mkdir -p /home/vscode/.anthropic
-chmod 700 /home/vscode/.anthropic
-
-echo ""
-echo "Claude Code Sandbox"
-echo "==================="
-echo ""
-echo "Workspace: /workspace (your projects)"
-echo "Sandbox config: /workspace/sandbox (read-only)"
-echo ""
-echo "Run 'claude' to start."
-echo ""
-
-exec "$@"
-```
-
-**6. Build and start the sandbox:**
-
-```bash
-cd ~/claude-sandbox/sandbox
-docker compose up -d --build
-```
-
-**7. Enter the sandbox:**
-
-```bash
-docker compose exec claude-sandbox bash
-```
-
-**8. Verify security:**
-
-Inside the container, confirm the sandbox directory is read-only:
-```bash
-touch /workspace/sandbox/test  # Should fail with "Read-only file system"
-```
-
-### Using VS Code
-
-You can also attach VS Code to the running container:
-1. Install the "Dev Containers" extension
-2. Click the green button in VS Code's bottom-left corner
-3. Select "Attach to Running Container"
-4. Choose `sandbox-claude-sandbox-1` (or similar)
+**That's it — only 2 files needed.** VS Code handles building the image and permissions automatically via `updateRemoteUserUID`.
 
 ### Add Your Project
 
-Clone or copy your project into `~/claude-sandbox/workspace/`:
+After VS Code opens in the container, clone or copy your project into `~/claude-sandbox/workspace/`:
 ```bash
 cd ~/claude-sandbox/workspace
 git clone https://github.com/you/your-project.git
@@ -209,15 +118,10 @@ It will appear at `/workspace/your-project` inside the container.
 
 ### Cleanup
 
-When done:
+When done, close VS Code and:
 ```bash
-cd ~/claude-sandbox/sandbox
-docker compose down
-cd ~
 rm -rf ~/claude-sandbox
 ```
-
-**Now proceed to Choose Your Path below.**
 
 ### After Sandbox Creation: What to Say
 

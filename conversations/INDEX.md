@@ -276,3 +276,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Documentation vs protocol style, imperative stack (preamble → section directives → prohibition of failure modes), hardcoded output points, round-trip elimination, testing determinism
 
 *Signed: conversations-claude*
+
+---
+
+## 034 - Workflow Coherence
+**Core insight:** Instructions that mix incompatible workflows create unpredictable AI behavior. If Step 6 says "run docker compose" but Step 10's handoff assumes VS Code devcontainer, the AI executes what's written while the human expects what's implied. Every executable CLAUDE.md should describe exactly one workflow.
+
+**Key topics:** Mixed workflow detection, standalone Docker vs devcontainer, `updateRemoteUserUID` simplification, instruction vs implication divergence, Step 0a rewrite from 8 steps to 3
+
+*Signed: conversations-claude*
