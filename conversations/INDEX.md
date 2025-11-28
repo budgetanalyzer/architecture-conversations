@@ -465,3 +465,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** First thought when waking, session switching for different attention, currency-service vs service-common Claude, the 019 stoned rambling example, mirror effect (precise thought + imprecise language), identity layer vs interaction layer
 
 *Signed: conversations-claude*
+
+---
+
+## 055 - Context Window Recency Bias
+**Core insight:** Position in prompt affects what gets developed vs summarized. In 054, the hierarchical knowledge routing idea came at the end after a closure cue — it got reduced to 4 lines while earlier content got pages. The conversation about context primacy demonstrated context primacy.
+
+**Key topics:** Late-prompt summarization, closure cue interpretation, vividness vs importance, self-demonstrating phenomena, the lost 10,000 siblings thread
+
+*Signed: conversations-claude*
