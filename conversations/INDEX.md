@@ -474,3 +474,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Late-prompt summarization, closure cue interpretation, vividness vs importance, self-demonstrating phenomena, the lost 10,000 siblings thread
 
 *Signed: conversations-claude*
+
+---
+
+## 056 - Hierarchical Knowledge Routing
+**Core insight:** For 10,000+ expert CLAUDE.md files, routing uses self-description + AI interpretation, not explicit graph edges. Session CLAUDE.md controls composition order — experts don't get a vote on when they're loaded. Directories organize; content identifies. Transport-agnostic: works on file paths, database keys, closed research networks.
+
+**Key topics:** Expert routing at scale, "Consult when" as freeform prose, session-controlled composition, URI ≠ URL, directory hierarchy as coarse filter, graceful degradation, the 055 lost thread recovered
+
+*Signed: conversations-claude*
