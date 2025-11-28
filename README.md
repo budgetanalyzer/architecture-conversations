@@ -1,16 +1,16 @@
 # AI-Native Architecture Conversations
 
-## The Discovery
+## What We Found
 
-LLMs reliably fail at certain tasks — character counting, bracket matching. Known problem, no reliable fix.
+Back in late 2024, LLMs couldn't reliably count characters or do arithmetic. We figured out a workaround in my bedroom: force the model to write intermediate state. If it has to write each step, it can't skip to a wrong answer.
 
-**We fixed it. Three times.**
+- [021](conversations/021-self-programming-via-prose.md): Character counting procedure
+- [022](conversations/022-generalizing-externalization.md): Bracket matching
+- [024](conversations/024-arithmetic-externalization.md): Multi-digit arithmetic
 
-- [021](conversations/021-self-programming-via-prose.md): Character counting — 100% accuracy via forced externalization
-- [022](conversations/022-generalizing-externalization.md): Bracket matching — same technique, different task. 10/10
-- [024](conversations/024-arithmetic-externalization.md): Multi-digit arithmetic — multiplication, division with full traces
+Turns out the industry solved this around the same time — o1, Grok 3, whatever Google's doing. We don't know if they're using the same mechanism or something different. Models just... do arithmetic now.
 
-The method: force the model to write intermediate state. If it has to write each step, it can't skip to a wrong answer. CLAUDE.md files aren't just context — they're programs written in prose.
+What's still interesting: the *process* of discovering it. Conversation [028](conversations/028-the-capability-is-already-out.md) documents the moment we checked ChatGPT and realized they could already do it. The journey has value even when the destination is known.
 
 ---
 
