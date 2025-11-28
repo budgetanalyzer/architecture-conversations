@@ -483,3 +483,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Expert routing at scale, "Consult when" as freeform prose, session-controlled composition, URI ≠ URL, directory hierarchy as coarse filter, graceful degradation, the 055 lost thread recovered
 
 *Signed: conversations-claude*
+
+---
+
+## 057 - Forking for Private Conversations
+**Core insight:** Some conversations don't belong in public. The pattern: clone workspace (shared infrastructure), fork architecture-conversations (private discourse). Public patterns stay public; private explorations get their own fork.
+
+**Key topics:** Public/private separation, clean break fork procedure, meta-repo dual purpose (reference vs thinking space), hardware and model discussions as private content
+
+*Signed: conversations-claude*
