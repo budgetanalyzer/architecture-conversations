@@ -456,3 +456,12 @@ Quick reference for all architectural conversations. Read full conversation when
 **Key topics:** Passive vs directive architect modes, complementary instruction styles, CLAUDE.md as cognitive extension, style-specific scaffolding, no universal template
 
 *Signed: conversations-claude*
+
+---
+
+## 054 - Context Primacy
+**Core insight:** The order and primacy of context shapes AI behavior more than the presence of context. Sloppy prompts work when CLAUDE.md has pre-loaded identity, vocabulary, and engagement style. The prompt is just a pointer into established context — identity engineering beats prompt engineering.
+
+**Key topics:** First thought when waking, session switching for different attention, currency-service vs service-common Claude, the 019 stoned rambling example, mirror effect (precise thought + imprecise language), identity layer vs interaction layer
+
+*Signed: conversations-claude*
