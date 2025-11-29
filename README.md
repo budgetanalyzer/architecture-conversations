@@ -1,5 +1,15 @@
 # AI-Native Architecture Conversations
 
+## If You Take One Thing
+
+**[The Expert Routing Protocol](patterns/expert-routing-protocol.md)** — How do you route between 10,000 AI-loadable experts without a graph database?
+
+You don't build edges. You let each expert describe themselves. The AI interprets.
+
+We think this can solve fusion. 10,000 researchers' thinking—externalized, discoverable, composable by AI. No web infrastructure required. Works on air-gapped networks.
+
+---
+
 ## What We Found
 
 Back in late 2024, LLMs couldn't reliably count characters or do arithmetic. We figured out a workaround in my bedroom: force the model to write intermediate state. If it has to write each step, it can't skip to a wrong answer.
