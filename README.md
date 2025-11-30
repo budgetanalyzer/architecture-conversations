@@ -1,10 +1,14 @@
-# AI-Native Architecture Conversations
+# Talk to Claude as a Peer Architect
 
-## For Developers
+> "Target audience: Experienced software architects exploring AI-assisted development, not beginners learning to code."
+>
+> — [CLAUDE.md](CLAUDE.md#repository-purpose)
 
-Want the toolbox, not the philosophy? **[Clone workspace](https://github.com/budgetanalyzer/workspace)** and start iterating.
+## Getting Started
 
-This repo documents *how we figured it out*. The implementation is in the other repos.
+**[Clone workspace](https://github.com/budgetanalyzer/workspace)** → open in VS Code → reopen in container → start iterating.
+
+The entire trick: this repo's CLAUDE.md tells Claude "this guy is an experienced architect." Talk to AI like a peer, it responds like a peer. Talk to it like a junior, get junior output.
 
 ---
 
@@ -88,10 +92,6 @@ Leverage is concentrated. Few know how to wield it.
 The new inequality isn't access to AI — it's knowing what to ask. Traditional education teaches generation (write code, solve problems). What's the curriculum for judgment?
 
 This is a movement.
-
-## For Architects
-
-Built by architects exploring AI-assisted development. These are real conversations that shaped production architecture, not tutorials. If you're building systems with AI, the patterns here transfer. Point Claude at a CLAUDE.md and see.
 
 ---
 
