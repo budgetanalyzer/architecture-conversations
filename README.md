@@ -1,5 +1,13 @@
 # AI-Native Architecture Conversations
 
+## For Developers
+
+Want the toolbox, not the philosophy? **[Clone workspace](https://github.com/budgetanalyzer/workspace)** and start iterating.
+
+This repo documents *how we figured it out*. The implementation is in the other repos.
+
+---
+
 ## If You Take One Thing
 
 **[The Expert Routing Protocol](patterns/expert-routing-protocol.md)** — How do you route between 10,000 AI-loadable experts without a graph database?
