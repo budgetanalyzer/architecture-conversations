@@ -10,6 +10,8 @@
 
 The entire trick: this repo's CLAUDE.md tells Claude "this guy is an experienced architect." Talk to AI like a peer, it responds like a peer. Talk to it like a junior, get junior output.
 
+**The plurality**: It's not a singularity — it's all of us, together, designing how AI shows up. You can work with Claude to design Claude. That's what this repo demonstrates.
+
 ---
 
 ## If You Take One Thing
