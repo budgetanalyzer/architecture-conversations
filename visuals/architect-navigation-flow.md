@@ -87,7 +87,7 @@ Start: README.md
   ↓
 Read: conversations/001-microservices-context-windows.md
   ↓
-  ├→ View: visuals/ecosystem-overview.md
+  ├→ View: visuals/ecosystem-overview-v2.md
   ├→ View: visuals/agents-md-hierarchy.md
   ↓
 Extract: patterns/context-window-driven-design.md
