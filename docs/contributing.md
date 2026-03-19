@@ -239,7 +239,7 @@ Maintainers and community will:
 
 When referencing implementation:
 ```markdown
-Implementation: [transaction-service/CLAUDE.md](https://github.com/budgetanalyzer/transaction-service/blob/main/CLAUDE.md)
+Implementation: [transaction-service/AGENTS.md](https://github.com/budgetanalyzer/transaction-service/blob/main/AGENTS.md)
 ```
 
 ### Linking Within This Repo
@@ -291,7 +291,7 @@ Budget Analyzer (Nov 2024):
 - Maintainability: CLAUDE.md updates take <5 minutes
 - Team size: 1-2 developers managing all services
 
-See: [orchestration/CLAUDE.md](https://github.com/budgetanalyzer/orchestration/blob/main/CLAUDE.md)
+See: [orchestration/AGENTS.md](https://github.com/budgetanalyzer/orchestration/blob/main/AGENTS.md)
 ```
 
 **Not Good**:

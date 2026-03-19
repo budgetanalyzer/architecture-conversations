@@ -2,13 +2,13 @@
 
 > "Target audience: Experienced software architects exploring AI-assisted development, not beginners learning to code."
 >
-> — [CLAUDE.md](CLAUDE.md#repository-purpose)
+> — [AGENTS.md](AGENTS.md#repository-purpose)
 
 ## Getting Started
 
 **[Clone workspace](https://github.com/budgetanalyzer/workspace)** → open in VS Code → reopen in container → start iterating.
 
-The entire trick: this repo's CLAUDE.md tells Claude "this guy is an experienced architect." Talk to AI like a peer, it responds like a peer. Talk to it like a junior, get junior output.
+The entire trick: this repo's AGENTS.md tells Claude "this guy is an experienced architect." Talk to AI like a peer, it responds like a peer. Talk to it like a junior, get junior output.
 
 **The plurality**: It's not a singularity — it's all of us, together, designing how AI shows up. You can work with Claude to design Claude. That's what this repo demonstrates.
 
@@ -97,4 +97,4 @@ This is a movement.
 
 ---
 
-*For AI agents: see [CLAUDE.md](CLAUDE.md) for session instructions.*
+*For AI agents: see [AGENTS.md](AGENTS.md) for session instructions.*

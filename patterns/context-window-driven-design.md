@@ -20,7 +20,7 @@ As codebases grow, AI agents struggle with context management. In monolithic rep
 **Example**:
 ```
 monolithic-ecommerce/
-├── CLAUDE.md (800 lines covering everything)
+├── AGENTS.md (800 lines covering everything)
 ├── src/orders/ (order processing)
 ├── src/inventory/ (stock management)
 ├── src/shipping/ (logistics)
@@ -50,15 +50,15 @@ Design repositories around what an AI agent should focus on at once. This mirror
    - Currency conversion → currency-service repository
    - Permission management → permission-service repository
 
-2. **Thin CLAUDE.md files with references**
-   - Keep root CLAUDE.md under 200 lines
+2. **Thin AGENTS.md files with references**
+   - Keep root AGENTS.md under 200 lines
    - Use pattern-based documentation (teach discovery, not duplication)
    - Reference detailed docs for just-in-time loading
 
 3. **Hierarchical context loading**
-   - System patterns (orchestration/CLAUDE.md)
-   - Shared patterns (service-common/CLAUDE.md)
-   - Service-specific (service-name/CLAUDE.md)
+   - System patterns (orchestration/AGENTS.md)
+   - Shared patterns (service-common/AGENTS.md)
+   - Service-specific (service-name/AGENTS.md)
    - Detailed docs (service-name/docs/*.md)
 
 4. **Clear service interfaces**
@@ -75,16 +75,16 @@ Design repositories around what an AI agent should focus on at once. This mirror
 ```
 /workspace/
 ├── orchestration/           # System coordination
-│   └── CLAUDE.md           (~150 lines, ~2,000 tokens)
+│   └── AGENTS.md           (~150 lines, ~2,000 tokens)
 ├── service-common/          # Shared Spring Boot patterns
-│   └── CLAUDE.md           (~200 lines, ~1,500 tokens)
+│   └── AGENTS.md           (~200 lines, ~1,500 tokens)
 ├── transaction-service/     # Transaction domain
-│   ├── CLAUDE.md           (~150 lines, ~1,500 tokens)
+│   ├── AGENTS.md           (~150 lines, ~1,500 tokens)
 │   └── docs/csv-import.md  (loaded just-in-time)
 ├── currency-service/        # Currency domain
-│   └── CLAUDE.md           (~150 lines, ~1,500 tokens)
+│   └── AGENTS.md           (~150 lines, ~1,500 tokens)
 └── permission-service/      # Permission domain
-    └── CLAUDE.md           (~150 lines, ~1,500 tokens)
+    └── AGENTS.md           (~150 lines, ~1,500 tokens)
 ```
 
 ### Context Loading for Transaction Work
@@ -92,9 +92,9 @@ Design repositories around what an AI agent should focus on at once. This mirror
 ```
 AI working on transaction-service loads:
 
-1. orchestration/CLAUDE.md        ~2,000 tokens (system patterns)
-2. service-common/CLAUDE.md       ~1,500 tokens (Spring patterns)
-3. transaction-service/CLAUDE.md  ~1,500 tokens (service-specific)
+1. orchestration/AGENTS.md        ~2,000 tokens (system patterns)
+2. service-common/AGENTS.md       ~1,500 tokens (Spring patterns)
+3. transaction-service/AGENTS.md  ~1,500 tokens (service-specific)
                                   ─────────────
 Total initial context:            ~5,000 tokens
 
@@ -105,7 +105,7 @@ Total with details:               ~8,000 tokens
 ```
 
 **Contrast with monolith**:
-- Monolithic CLAUDE.md: ~25,000 tokens upfront
+- Monolithic AGENTS.md: ~25,000 tokens upfront
 - Reduction: 80% less initial context
 - Result: AI attention highly focused on transactions
 
@@ -223,8 +223,8 @@ mkdir transaction-service
 cd transaction-service
 git init
 
-# Add thin CLAUDE.md
-cat > CLAUDE.md << 'EOF'
+# Add thin AGENTS.md
+cat > AGENTS.md << 'EOF'
 # Transaction Service
 
 ## Service Purpose
@@ -237,7 +237,7 @@ grep -r "@GetMapping\|@PostMapping" src/main/java/
 ```
 
 ## References
-- Shared patterns: ../service-common/CLAUDE.md
+- Shared patterns: ../service-common/AGENTS.md
 - Detailed docs: docs/csv-import.md
 EOF
 ```
@@ -254,9 +254,9 @@ public class TransactionController {
 }
 ```
 
-### Step 4: Hierarchical CLAUDE.md
+### Step 4: Hierarchical AGENTS.md
 
-**orchestration/CLAUDE.md** (system patterns):
+**orchestration/AGENTS.md** (system patterns):
 ```markdown
 # Budget Analyzer - System Overview
 
@@ -271,7 +271,7 @@ kubectl get svc -n budget-analyzer
 - permission-service (port 8086)
 ```
 
-**service-common/CLAUDE.md** (shared patterns):
+**service-common/AGENTS.md** (shared patterns):
 ```markdown
 # Service Common - Shared Spring Boot Patterns
 
@@ -281,7 +281,7 @@ All services follow these conventions:
 - Gradle build system
 ```
 
-**transaction-service/CLAUDE.md** (service-specific):
+**transaction-service/AGENTS.md** (service-specific):
 ```markdown
 # Transaction Service
 
@@ -298,7 +298,7 @@ See docs/csv-import.md for details.
 
 ```bash
 # Check token count
-cat orchestration/CLAUDE.md service-common/CLAUDE.md transaction-service/CLAUDE.md | wc -w
+cat orchestration/AGENTS.md service-common/AGENTS.md transaction-service/AGENTS.md | wc -w
 # Should be under 2,500 words (~5,000 tokens)
 ```
 
@@ -313,9 +313,9 @@ cat orchestration/CLAUDE.md service-common/CLAUDE.md transaction-service/CLAUDE.
    - After: Y tokens for focused context
    - Target: 60-80% reduction
 
-2. **CLAUDE.md File Size**
+2. **AGENTS.md File Size**
    - Target: Under 200 lines per file
-   - Measured: `wc -l CLAUDE.md`
+   - Measured: `wc -l AGENTS.md`
 
 3. **Repository Count vs. Service Count**
    - Ideal: 1:1 ratio (one repo per service)
@@ -328,7 +328,7 @@ cat orchestration/CLAUDE.md service-common/CLAUDE.md transaction-service/CLAUDE.
    - Fewer generic responses
 
 2. **Maintainability**
-   - CLAUDE.md files easy to update
+   - AGENTS.md files easy to update
    - Living documentation stays current
    - New team members onboard faster
 
@@ -343,34 +343,34 @@ cat orchestration/CLAUDE.md service-common/CLAUDE.md transaction-service/CLAUDE.
 
 ### Modular Monolith Variant
 
-Use subdirectory CLAUDE.md files:
+Use subdirectory AGENTS.md files:
 
 ```
 ecommerce-monolith/
-├── CLAUDE.md (root patterns)
+├── AGENTS.md (root patterns)
 ├── orders/
-│   ├── CLAUDE.md (orders domain)
+│   ├── AGENTS.md (orders domain)
 │   └── src/
 ├── inventory/
-│   ├── CLAUDE.md (inventory domain)
+│   ├── AGENTS.md (inventory domain)
 │   └── src/
 └── shipping/
-    ├── CLAUDE.md (shipping domain)
+    ├── AGENTS.md (shipping domain)
     └── src/
 ```
 
-**Tradeoff**: Better than single CLAUDE.md, but:
+**Tradeoff**: Better than single AGENTS.md, but:
 - Still one repository
 - Single deployment unit
 - Tighter coupling than separate repos
 
 ### Library Variant
 
-Shared libraries get CLAUDE.md too:
+Shared libraries get AGENTS.md too:
 
 ```
 service-common/
-├── CLAUDE.md (shared patterns)
+├── AGENTS.md (shared patterns)
 ├── docs/
 │   ├── testing-patterns.md
 │   └── security-patterns.md
@@ -379,9 +379,9 @@ service-common/
 
 Services reference library patterns:
 ```markdown
-# transaction-service/CLAUDE.md
+# transaction-service/AGENTS.md
 
-Follows patterns from service-common/CLAUDE.md:
+Follows patterns from service-common/AGENTS.md:
 - Testing with TestContainers
 - JWT security
 ```
@@ -390,7 +390,7 @@ Follows patterns from service-common/CLAUDE.md:
 
 ## Related Patterns
 
-- **Pattern-Based Documentation** - How to write CLAUDE.md files that survive refactoring
+- **Pattern-Based Documentation** - How to write AGENTS.md files that survive refactoring
 - **Hierarchical Context Loading** - System → Shared → Service → Details
 - **Repository per Service** - Microservices organizational pattern
 - **BFF + API Gateway** - Service routing without tight coupling
@@ -421,8 +421,8 @@ Follows patterns from service-common/CLAUDE.md:
 ## Real-World Evidence
 
 **Budget Analyzer Statistics** (as of November 2024):
-- 8 repositories with CLAUDE.md files
-- Average CLAUDE.md: 150 lines
+- 8 repositories with AGENTS.md files
+- Average AGENTS.md: 150 lines
 - Context reduction: 80% (5k vs 25k tokens)
 - Services: Independently deployable via Tilt
 - Team: 1-2 developers managing all services effectively
@@ -442,8 +442,8 @@ Follows patterns from service-common/CLAUDE.md:
 
 ### Implementations
 - [Budget Analyzer](https://github.com/budgetanalyzer) - 8 repositories demonstrating this pattern
-- [orchestration/CLAUDE.md](https://github.com/budgetanalyzer/orchestration/blob/main/CLAUDE.md) - System-level example
-- [transaction-service/CLAUDE.md](https://github.com/budgetanalyzer/transaction-service/blob/main/CLAUDE.md) - Service-level example
+- [orchestration/AGENTS.md](https://github.com/budgetanalyzer/orchestration/blob/main/AGENTS.md) - System-level example
+- [transaction-service/AGENTS.md](https://github.com/budgetanalyzer/transaction-service/blob/main/AGENTS.md) - Service-level example
 
 ### Related Concepts
 - Domain-Driven Design (Eric Evans) - Bounded contexts
@@ -460,7 +460,7 @@ A: Yes and no. Microservices existed long before AI. What's new is explicitly re
 
 **Q: What if my team is too small for microservices?**
 
-A: Start with a modular monolith using subdirectory CLAUDE.md files. The pattern-based documentation approach works regardless of deployment model.
+A: Start with a modular monolith using subdirectory AGENTS.md files. The pattern-based documentation approach works regardless of deployment model.
 
 **Q: How do I handle cross-service changes?**
 
@@ -473,14 +473,14 @@ A: Same as traditional microservices:
 **Q: Does this work for non-Java projects?**
 
 A: Absolutely. The pattern is language-agnostic:
-- Python services: Each has its own repo + CLAUDE.md
-- Go services: Each has its own repo + CLAUDE.md
-- Frontend apps: Each has its own repo + CLAUDE.md
+- Python services: Each has its own repo + AGENTS.md
+- Go services: Each has its own repo + AGENTS.md
+- Frontend apps: Each has its own repo + AGENTS.md
 - The principle is universal: **bounded contexts for AI attention**
 
 **Q: What about monorepos?**
 
-A: Monorepos can use subdirectory CLAUDE.md files with hierarchical loading. The key is defining attention boundaries, not physical repository separation. However, separate repos provide stronger boundaries and independent versioning.
+A: Monorepos can use subdirectory AGENTS.md files with hierarchical loading. The key is defining attention boundaries, not physical repository separation. However, separate repos provide stronger boundaries and independent versioning.
 
 ---
 
