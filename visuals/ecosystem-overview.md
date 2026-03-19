@@ -1,3 +1,5 @@
+> **Deprecated**: This lists token-validation-service (removed) and is missing ext-authz, workspace, and other repos. See [ecosystem-overview-v2.md](ecosystem-overview-v2.md) for current state.
+
 # GitHub Repository Ecosystem
 
 Visual representation of the Budget Analyzer organization structure showing all repositories and their CLAUDE.md files.

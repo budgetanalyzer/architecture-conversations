@@ -21,6 +21,10 @@
 ls -la /workspace
 ```
 
+## Code Exploration
+
+NEVER use Agent/subagent tools for code exploration. Use Grep, Glob, and Read directly.
+
 ## Repository Purpose
 
 This is a **meta-repository for architectural discourse** - a place for software architects to have deep technical conversations with AI about production architecture patterns.
@@ -125,7 +129,6 @@ This repository discusses the [Budget Analyzer](https://github.com/budgetanalyze
 ├── transaction-service/        # Microservice example
 ├── currency-service/           # Microservice example
 ├── permission-service/         # Microservice example
-├── token-validation-service/   # JWT validation
 ├── session-gateway/            # BFF for browser security
 ├── budget-analyzer-web/        # React frontend
 ├── architecture-conversations/ # This repo

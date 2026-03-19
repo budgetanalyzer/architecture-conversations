@@ -1,3 +1,5 @@
+> **Deprecated**: This describes an earlier architecture (JWT-based, with token-validation-service). See [request-flow-bff-gateway-v2.md](request-flow-bff-gateway-v2.md) for the current ext_authz-based design.
+
 # Request Flow Through BFF + API Gateway
 
 Visual representation of how browser requests flow through the dual-gateway architecture.
