@@ -1,4 +1,4 @@
-# CLAUDE.md Hierarchy and Loading Pattern
+# AGENTS.md Hierarchy and Loading Pattern
 
 Visual representation of how AI context is loaded hierarchically across repositories.
 
@@ -11,19 +11,19 @@ AI CONTEXT LOADING PATTERN
 │                                                              │
 │  CONTEXT LOADED (Hierarchical):                             │
 │                                                              │
-│  1. /workspace/orchestration/CLAUDE.md        [Always]      │
+│  1. /workspace/orchestration/AGENTS.md        [Always]      │
 │     ├─ System architecture patterns                         │
 │     ├─ Gateway routing patterns                             │
 │     ├─ BFF + API Gateway hybrid pattern                     │
 │     └─ Discovery commands (grep, kubectl, etc)              │
 │                                                              │
-│  2. /workspace/service-common/CLAUDE.md      [Subtree]      │
+│  2. /workspace/service-common/AGENTS.md      [Subtree]      │
 │     ├─ Spring Boot conventions                              │
 │     ├─ Testing patterns (TestContainers)                    │
 │     ├─ Security patterns (JWT, RBAC)                        │
 │     └─ References to docs/spring-boot-conventions.md        │
 │                                                              │
-│  3. /workspace/transaction-service/CLAUDE.md [Subtree]      │
+│  3. /workspace/transaction-service/AGENTS.md [Subtree]      │
 │     ├─ "Follows service-common patterns" (reference)        │
 │     ├─ Service-specific: CSV import feature                 │
 │     ├─ Service-specific: Transaction domain logic           │
@@ -46,10 +46,10 @@ AI CONTEXT LOADING PATTERN
 PATTERN-BASED APPROACH (Used by Budget Analyzer):
 ═════════════════════════════════════════════════
 
-Initial context (3 CLAUDE.md files):
-  orchestration/CLAUDE.md:           ~2,000 tokens
-  service-common/CLAUDE.md:          ~1,500 tokens
-  transaction-service/CLAUDE.md:     ~1,500 tokens
+Initial context (3 AGENTS.md files):
+  orchestration/AGENTS.md:           ~2,000 tokens
+  service-common/AGENTS.md:          ~1,500 tokens
+  transaction-service/AGENTS.md:     ~1,500 tokens
                                      ───────────────
   Total initial context:             ~5,000 tokens
 
@@ -58,11 +58,11 @@ Just-in-time detail (loaded as needed):
   docs/testing-patterns.md:          ~2,500 tokens
 
 
-TRADITIONAL APPROACH (Everything in one CLAUDE.md):
+TRADITIONAL APPROACH (Everything in one AGENTS.md):
 ═══════════════════════════════════════════════════
 
 Single monolithic file:
-  CLAUDE.md:                        ~25,000 tokens
+  AGENTS.md:                        ~25,000 tokens
   - System patterns
   - All service details
   - All Spring patterns
@@ -82,21 +82,21 @@ Result:                More focused AI attention
 ## Loading Hierarchy
 
 ### Level 1: System (Always Loaded)
-**orchestration/CLAUDE.md**
+**orchestration/AGENTS.md**
 - Gateway routing patterns
 - Service discovery methods
 - Development workflow (Tilt, Kind)
 - Cross-service concerns
 
 ### Level 2: Shared Patterns (Subtree)
-**service-common/CLAUDE.md**
+**service-common/AGENTS.md**
 - Spring Boot conventions
 - Testing patterns
 - Security patterns
 - Build system (Gradle)
 
 ### Level 3: Service-Specific (Subtree)
-**{service-name}/CLAUDE.md**
+**{service-name}/AGENTS.md**
 - Unique service concerns
 - Domain-specific logic
 - References to service-common
@@ -127,9 +127,9 @@ Result:                More focused AI attention
 
 **Scenario**: AI agent needs to add a new CSV import feature to transaction-service
 
-1. **Load orchestration/CLAUDE.md** - Understand system patterns
-2. **Load service-common/CLAUDE.md** - Learn Spring Boot conventions
-3. **Load transaction-service/CLAUDE.md** - Understand existing CSV import
+1. **Load orchestration/AGENTS.md** - Understand system patterns
+2. **Load service-common/AGENTS.md** - Learn Spring Boot conventions
+3. **Load transaction-service/AGENTS.md** - Understand existing CSV import
 4. **Just-in-time: Load docs/csv-import.md** - Get implementation details
 5. **Work on code** - AI has focused context for this specific task
 
@@ -137,7 +137,7 @@ Result:                More focused AI attention
 
 ## Key Principles
 
-1. **Thin root files** - CLAUDE.md files stay under 200 lines
+1. **Thin root files** - AGENTS.md files stay under 200 lines
 2. **References, not duplication** - Point to detailed docs
 3. **Pattern-based** - Teach AI to discover current state
 4. **Hierarchical** - System → Shared → Service → Details
@@ -148,7 +148,7 @@ Result:                More focused AI attention
 | Aspect | Pattern-Based | Traditional |
 |--------|---------------|-------------|
 | Initial context | ~5,000 tokens | ~25,000 tokens |
-| CLAUDE.md size | ~150 lines each | ~800 lines |
+| AGENTS.md size | ~150 lines each | ~800 lines |
 | Maintainability | High (thin files) | Low (one huge file) |
 | Scalability | Excellent (works at any scale) | Poor (grows linearly) |
 | AI focus | High (only relevant context) | Low (diluted attention) |
@@ -157,6 +157,6 @@ Result:                More focused AI attention
 
 ## References
 
-- Implementation: [orchestration/CLAUDE.md](https://github.com/budgetanalyzer/orchestration/blob/main/CLAUDE.md)
+- Implementation: [orchestration/AGENTS.md](https://github.com/budgetanalyzer/orchestration/blob/main/AGENTS.md)
 - Decision: [docs/decisions/003-pattern-based-claude-files.md](https://github.com/budgetanalyzer/orchestration/blob/main/docs/decisions/003-pattern-based-claude-files.md)
 - Pattern: [patterns/context-window-driven-design.md](../patterns/context-window-driven-design.md)

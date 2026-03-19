@@ -33,7 +33,7 @@ Interviewer: "But can you answer the question or not?"
 
 ## Solution
 
-**Expert works with AI to externalize their mental model through dialogue.** The conversation itself is the elicitation process. The output is structured as CLAUDE.md - natural language instructions for AI cognition that become URI-addressable and composable.
+**Expert works with AI to externalize their mental model through dialogue.** The conversation itself is the elicitation process. The output is structured as AGENTS.md - natural language instructions for AI cognition that become URI-addressable and composable.
 
 ### Core Principle
 
@@ -53,7 +53,7 @@ The AI isn't just a documentation tool. It's a collaborative partner that:
    - Back-and-forth refines the mental model
    - Tacit becomes explicit through dialogue
 
-2. **Structuring Output** (CLAUDE.md Format)
+2. **Structuring Output** (AGENTS.md Format)
    - Natural language (LLMs interpret flexibly)
    - Instructions for AI cognition, not human documentation
    - Discovery patterns, not static facts
@@ -65,7 +65,7 @@ The AI isn't just a documentation tool. It's a collaborative partner that:
    - Any mechanism that makes content fetchable
 
 4. **Cross-Referencing** (Composition)
-   - Links to related CLAUDE.md files
+   - Links to related AGENTS.md files
    - Creates navigable graphs of expertise
    - Federated, not centralized
 
@@ -82,12 +82,12 @@ Bleu Rubin, a software architect with 20 years of experience, couldn't demonstra
 **The Result**:
 ```
 budgetanalyzer.org/
-├── orchestration/CLAUDE.md        # System thinking
-├── service-common/CLAUDE.md       # Pattern thinking
-├── transaction-service/CLAUDE.md  # Domain thinking
-├── currency-service/CLAUDE.md     # Domain thinking
-├── permission-service/CLAUDE.md   # Domain thinking
-├── session-gateway/CLAUDE.md      # Security thinking
+├── orchestration/AGENTS.md        # System thinking
+├── service-common/AGENTS.md       # Pattern thinking
+├── transaction-service/AGENTS.md  # Domain thinking
+├── currency-service/AGENTS.md     # Domain thinking
+├── permission-service/AGENTS.md   # Domain thinking
+├── session-gateway/AGENTS.md      # Security thinking
 └── architecture-conversations/    # Meta-thinking
     ├── conversations/             # Full dialogues
     └── patterns/                  # Extracted wisdom
@@ -102,7 +102,7 @@ Instead of:
 
 An interviewer could:
 1. Clone the devcontainer
-2. Load the CLAUDE.md context
+2. Load the AGENTS.md context
 3. Watch the AI work with that mental model
 4. See the architecture in action
 5. Ask questions, observe reasoning
@@ -140,10 +140,10 @@ An interviewer could:
 2. **Onboarding Acceleration**
    - New team members load expert context
    - AI explains decisions using captured reasoning
-   - "Ask the CLAUDE.md" instead of "ask Sarah"
+   - "Ask the AGENTS.md" instead of "ask Sarah"
 
 3. **Composable Expertise**
-   - Multiple experts' CLAUDE.md files compose
+   - Multiple experts' AGENTS.md files compose
    - Cross-reference creates organizational knowledge graph
    - No central authority required
 
@@ -243,7 +243,7 @@ AI: "I notice you mentioned [pattern].
 - Probe for patterns across examples
 - Identify decision points and criteria
 
-### Step 3: Structure as CLAUDE.md
+### Step 3: Structure as AGENTS.md
 
 ```markdown
 # [Domain] - [Expert Name]'s Approach
@@ -268,7 +268,7 @@ When faced with [situation]:
 
 ## Related Contexts
 
-- [Link to related CLAUDE.md]
+- [Link to related AGENTS.md]
 - [Link to implementation examples]
 
 ## When This Applies
@@ -281,7 +281,7 @@ When faced with [situation]:
 
 **Option A: GitHub Raw URL**
 ```
-https://raw.githubusercontent.com/org/repo/main/CLAUDE.md
+https://raw.githubusercontent.com/org/repo/main/AGENTS.md
 ```
 
 **Option B: Devcontainer Customization**
@@ -300,13 +300,13 @@ https://raw.githubusercontent.com/org/repo/main/CLAUDE.md
 
 ### Step 5: Cross-Reference
 
-Link related CLAUDE.md files:
+Link related AGENTS.md files:
 ```markdown
 ## Related Expertise
 
-- [Security thinking](../security-expert/CLAUDE.md)
-- [Performance thinking](../perf-expert/CLAUDE.md)
-- [Domain context](../domain-service/CLAUDE.md)
+- [Security thinking](../security-expert/AGENTS.md)
+- [Performance thinking](../perf-expert/AGENTS.md)
+- [Domain context](../domain-service/AGENTS.md)
 ```
 
 This creates a navigable graph of expertise.
@@ -365,7 +365,7 @@ When assessing [investment type]:
 [How this manager decides]
 ```
 
-**The pattern is universal**: Expert + AI dialogue → CLAUDE.md → URI-addressable expertise.
+**The pattern is universal**: Expert + AI dialogue → AGENTS.md → URI-addressable expertise.
 
 ---
 
@@ -395,7 +395,7 @@ But it succeeds where formal ontologies failed:
    - Cross-references created
 
 2. **Usage**
-   - AI sessions loading CLAUDE.md files
+   - AI sessions loading AGENTS.md files
    - Questions answered without expert present
    - Onboarding time reduction
 
@@ -440,8 +440,8 @@ But it succeeds where formal ontologies failed:
 ## Related Patterns
 
 - **Context Window-Driven Design** - How to size knowledge for AI consumption
-- **Pattern-Based Documentation** - How to structure CLAUDE.md content
-- **Hierarchical Context Loading** - How CLAUDE.md files compose
+- **Pattern-Based Documentation** - How to structure AGENTS.md content
+- **Hierarchical Context Loading** - How AGENTS.md files compose
 
 ---
 
@@ -454,7 +454,7 @@ But it succeeds where formal ontologies failed:
 - budgetanalyzer.org = "Bleu Rubin's coding philosophy"
 
 **This very pattern document**:
-- Extracted from a conversation about what CLAUDE.md files actually are
+- Extracted from a conversation about what AGENTS.md files actually are
 - The conversation demonstrated the method while explaining it
 - Recursive proof: the method explaining itself
 
@@ -464,7 +464,7 @@ But it succeeds where formal ontologies failed:
 
 **Q: Isn't this just documentation?**
 
-A: No. Documentation is for humans reading sequentially. CLAUDE.md is instructions for AI cognition - what to attend to, how to navigate, where the boundaries are. The consumer is fundamentally different.
+A: No. Documentation is for humans reading sequentially. AGENTS.md is instructions for AI cognition - what to attend to, how to navigate, where the boundaries are. The consumer is fundamentally different.
 
 **Q: Why dialogue instead of just writing?**
 
@@ -472,11 +472,11 @@ A: Tacit knowledge is hard to articulate alone. The AI's questions surface assum
 
 **Q: What prevents low-quality knowledge capture?**
 
-A: Same as low-quality code: review, iteration, production use. A CLAUDE.md that leads AI astray will be obvious when the AI produces bad results.
+A: Same as low-quality code: review, iteration, production use. A AGENTS.md that leads AI astray will be obvious when the AI produces bad results.
 
 **Q: Does this replace the expert?**
 
-A: No. It captures a snapshot of their thinking at a point in time. The expert continues to evolve, and the CLAUDE.md needs periodic updates. But it does reduce dependency and enable knowledge sharing.
+A: No. It captures a snapshot of their thinking at a point in time. The expert continues to evolve, and the AGENTS.md needs periodic updates. But it does reduce dependency and enable knowledge sharing.
 
 **Q: What about sensitive or proprietary knowledge?**
 

@@ -25,10 +25,10 @@ How conversation becomes addressable knowledge.
 │                           URI LAYER                                   │
 │                                                                       │
 │    ┌─────────────────────────────────────────────────────────────┐   │
-│    │                    CLAUDE.md files                          │   │
+│    │                    AGENTS.md files                          │   │
 │    │                                                              │   │
-│    │   github.com/org/service-a/CLAUDE.md                        │   │
-│    │   github.com/org/service-b/CLAUDE.md                        │   │
+│    │   github.com/org/service-a/AGENTS.md                        │   │
+│    │   github.com/org/service-b/AGENTS.md                        │   │
 │    │   ...                                                       │   │
 │    │                                                              │   │
 │    │   (URI-addressable knowledge)                               │   │
@@ -57,7 +57,7 @@ How conversation becomes addressable knowledge.
 │                           URI LAYER      │                          │
 │                                          ▼                          │
 │    ┌─────────────────────────────────────────────────────────────┐ │
-│    │                    CLAUDE.md files                          │ │
+│    │                    AGENTS.md files                          │ │
 │    └─────────────────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────────────────────┘
 
@@ -76,7 +76,7 @@ How conversation becomes addressable knowledge.
 
 ## Two Layers
 
-**URI Layer**: Where knowledge lives. CLAUDE.md files at stable addresses.
+**URI Layer**: Where knowledge lives. AGENTS.md files at stable addresses.
 
 **AI Layer**: Where conversation happens. Expert talks, AI listens and writes.
 
@@ -84,7 +84,7 @@ How conversation becomes addressable knowledge.
 
 The expert just chats. The AI:
 1. Extracts the mental model from conversation
-2. Writes it to CLAUDE.md
+2. Writes it to AGENTS.md
 3. Persists it at a URI
 
 Later, any AI can fetch that context and collaborate with the expert as if they'd had that conversation.

@@ -42,7 +42,7 @@ Entry Point: "I want to understand microservices + AI"
 │  transaction-service/      │
 │  "Real code"               │
 │                            │
-│  Read: CLAUDE.md           │
+│  Read: AGENTS.md           │
 │  Read: docs/csv-import.md  │
 │  Read: src/main/java/...  │
 └────────────────────────────┘
@@ -74,7 +74,7 @@ Check `visuals/` for diagrams:
 ### 4. Implementation (Real Code)
 Navigate to actual Budget Analyzer repos:
 - See pattern in production
-- Read CLAUDE.md files
+- Read AGENTS.md files
 - Study real implementations
 - Learn from working code
 
@@ -87,16 +87,16 @@ Start: README.md
   ↓
 Read: conversations/001-microservices-context-windows.md
   ↓
-  ├→ View: visuals/ecosystem-overview.md
-  ├→ View: visuals/claude-md-hierarchy.md
+  ├→ View: visuals/ecosystem-overview-v2.md
+  ├→ View: visuals/agents-md-hierarchy.md
   ↓
 Extract: patterns/context-window-driven-design.md
   ↓
-Implement: Look at transaction-service/CLAUDE.md
+Implement: Look at transaction-service/AGENTS.md
   ↓
-Study: Compare with currency-service/CLAUDE.md
+Study: Compare with currency-service/AGENTS.md
   ↓
-Understand: orchestration/CLAUDE.md ties them together
+Understand: orchestration/AGENTS.md ties them together
 ```
 
 ### Journey 2: Implementing BFF + API Gateway Pattern
@@ -120,18 +120,18 @@ Understand: How JWT never reaches browser
 ### Journey 3: Learning Pattern-Based Documentation
 
 ```
-Start: Curious about CLAUDE.md philosophy
+Start: Curious about AGENTS.md philosophy
   ↓
-Read: CLAUDE.md in this repo
+Read: AGENTS.md in this repo
   ↓
-View: visuals/claude-md-hierarchy.md
+View: visuals/agents-md-hierarchy.md
   ↓
 Read: orchestration/docs/decisions/003-pattern-based-claude-files.md
   ↓
-Study: Compare CLAUDE.md files across repos:
-  ├→ orchestration/CLAUDE.md (system patterns)
-  ├→ service-common/CLAUDE.md (shared patterns)
-  └→ transaction-service/CLAUDE.md (thin, references common)
+Study: Compare AGENTS.md files across repos:
+  ├→ orchestration/AGENTS.md (system patterns)
+  ├→ service-common/AGENTS.md (shared patterns)
+  └→ transaction-service/AGENTS.md (thin, references common)
   ↓
 Extract: patterns/pattern-based-documentation.md (future)
 ```
@@ -179,7 +179,7 @@ Extract: patterns/pattern-based-documentation.md (future)
 When reading conversations/patterns in this repo, you'll see references like:
 
 ```markdown
-Implementation: [transaction-service/CLAUDE.md](https://github.com/budgetanalyzer/transaction-service/blob/main/CLAUDE.md)
+Implementation: [transaction-service/AGENTS.md](https://github.com/budgetanalyzer/transaction-service/blob/main/AGENTS.md)
 ```
 
 This means:
@@ -206,7 +206,7 @@ This means:
 ### How AI discovers this ecosystem
 
 ```
-1. AI loads: architecture-conversations/CLAUDE.md
+1. AI loads: architecture-conversations/AGENTS.md
    ↓
    Understands: This is meta-repo for architectural discourse
 
@@ -233,7 +233,7 @@ This means:
 
 This repository serves as the **"why"** layer:
 - **Why** microservices align with AI context windows
-- **Why** CLAUDE.md files matter architecturally
+- **Why** AGENTS.md files matter architecturally
 - **Why** certain patterns emerged
 - **Why** specific decisions were made
 

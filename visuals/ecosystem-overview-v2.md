@@ -13,7 +13,7 @@ Visual representation of the Budget Analyzer organization structure.
 │  │                       │      │                                  │  │
 │  │  ┌────────────────┐  │      │  ┌──────────────────────────┐   │  │
 │  │  │ .github        │  │      │  │  orchestration           │   │  │
-│  │  │ (org templates)│  │      │  │  CLAUDE.md               │   │  │
+│  │  │ (org templates)│  │      │  │  AGENTS.md               │   │  │
 │  │  └────────────────┘  │      │  │  - System patterns       │   │  │
 │  │                       │      │  │  - Gateway config        │   │  │
 │  │  ┌────────────────┐  │      │  │  - K8s manifests         │   │  │
@@ -23,7 +23,7 @@ Visual representation of the Budget Analyzer organization structure.
 │  │  │                │  │      │                                  │  │
 │  │  │ Conversations  │  │      │  ┌──────────────────────────┐   │  │
 │  │  │ about all      │  │      │  │  service-common          │   │  │
-│  │  │ repos ─────────┼──┼──────┼─→│  CLAUDE.md               │   │  │
+│  │  │ repos ─────────┼──┼──────┼─→│  AGENTS.md               │   │  │
 │  │  └────────────────┘  │      │  │  - Spring patterns       │   │  │
 │  │                       │      │  │  - Shared library        │   │  │
 │  │  ┌────────────────┐  │      │  └──────────────────────────┘   │  │
@@ -40,7 +40,7 @@ Visual representation of the Budget Analyzer organization structure.
 │  │  ┌──────────────┐  ┌──────────────┐                           │  │
 │  │  │ session      │  │ ext-authz    │                           │  │
 │  │  │ -gateway     │  │ (in orch.)   │                           │  │
-│  │  │ CLAUDE.md    │  │ Go HTTP svc  │                           │  │
+│  │  │ AGENTS.md    │  │ Go HTTP svc  │                           │  │
 │  │  │ - BFF/OAuth  │  │ - Session    │                           │  │
 │  │  │ - Session    │  │   validation │                           │  │
 │  │  │   lifecycle  │  │ - Redis      │                           │  │
@@ -56,7 +56,7 @@ Visual representation of the Budget Analyzer organization structure.
 │  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐        │  │
 │  │  │ transaction  │  │ currency     │  │ permission   │        │  │
 │  │  │ -service     │  │ -service     │  │ -service     │        │  │
-│  │  │ CLAUDE.md    │  │ CLAUDE.md    │  │ CLAUDE.md    │        │  │
+│  │  │ AGENTS.md    │  │ AGENTS.md    │  │ AGENTS.md    │        │  │
 │  │  │ - Thin       │  │ - Thin       │  │ - Thin       │        │  │
 │  │  │ - References │  │ - References │  │ - References │        │  │
 │  │  │   common     │  │   common     │  │   common     │        │  │
@@ -68,7 +68,7 @@ Visual representation of the Budget Analyzer organization structure.
 │  │                                                                 │  │
 │  │  ┌──────────────────────────────────────┐                     │  │
 │  │  │  budget-analyzer-web                  │                     │  │
-│  │  │  CLAUDE.md                            │                     │  │
+│  │  │  AGENTS.md                            │                     │  │
 │  │  │  - React patterns                     │                     │  │
 │  │  │  - API integration through gateway    │                     │  │
 │  │  └──────────────────────────────────────┘                     │  │
@@ -86,7 +86,7 @@ Visual representation of the Budget Analyzer organization structure.
 └──────────────────────────────────────────────────────────────────────┘
 
 KEY:
-CLAUDE.md = AI context file
+AGENTS.md = AI context file
 ─→ = References/depends on
 ```
 
@@ -130,9 +130,9 @@ CLAUDE.md = AI context file
 | Permission Service | 8086 | Java | Roles/permissions resolution |
 | React Dev Server | 3000 | TypeScript | Frontend (dev only) |
 
-## CLAUDE.md Distribution
+## AGENTS.md Distribution
 
-Every service repository contains a CLAUDE.md file that:
+Every service repository contains a AGENTS.md file that:
 - Provides AI context specific to that service
 - References service-common for inherited patterns
 - Uses discovery commands instead of hardcoded lists
@@ -140,8 +140,8 @@ Every service repository contains a CLAUDE.md file that:
 
 ## AI Navigation Pattern
 
-1. Start at `orchestration/CLAUDE.md` (system overview)
+1. Start at `orchestration/AGENTS.md` (system overview)
 2. Discover all services via Tiltfile/K8s manifests
-3. Navigate to specific service CLAUDE.md for focused work
+3. Navigate to specific service AGENTS.md for focused work
 4. Load service-common context for inherited patterns
 5. Just-in-time load detailed docs as needed
