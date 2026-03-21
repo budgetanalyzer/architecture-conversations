@@ -4,16 +4,17 @@
 
 **Archetype**: meta
 **Scope**: budgetanalyzer ecosystem
-**Role**: Captures architectural discourse; observes but doesn't modify the system
+**Role**: Captures architectural discourse; maintains cross-repo AI context and documentation conventions
 
 ### Relationships
-- **Observes**: All repos in /workspace (read-only for grounding)
+- **Observes**: All repos in /workspace (for grounding)
+- **Can update documentation in**: Sibling repos when cross-repo guidance needs alignment
 - **Peers with**: None at this scope (unique meta)
 
 ### Permissions
 - **Read**: All of `../` (for grounding conversations in real implementation)
-- **Write**: This repository only
-- **Forbidden**: Modifying any sibling repo
+- **Write**: This repository; documentation in sibling repos when necessary
+- **Forbidden**: Modifying sibling repo code, infrastructure, or other non-documentation artifacts
 
 ### Discovery
 ```bash
@@ -24,6 +25,19 @@ ls -la /workspace
 ## Code Exploration
 
 NEVER use Agent/subagent tools for code exploration. Use Grep, Glob, and Read directly.
+
+## Documentation Discipline
+
+Always keep documentation up to date after any configuration or code change.
+
+Update the nearest affected documentation in the same work:
+- `AGENTS.md` when instructions, guardrails, discovery commands, or repository-specific workflow changes
+- `README.md` when setup, usage, or repository purpose changes
+- `docs/` when architecture, configuration, APIs, behaviors, or operational workflows change
+
+Do not leave documentation updates as follow-up work.
+
+In this repository, update operational documentation and metadata, not historical conversation artifacts.
 
 ## Repository Purpose
 
@@ -229,6 +243,7 @@ The user can always ask for explanation afterward. But they can't un-waste time 
 - Read existing conversations before adding new ones
 - **Never modify conversations, patterns, or visuals** - these are historical artifacts. The concepts are timeless; the links were accurate when written. External references may break as infrastructure evolves—that's acceptable.
 - **Metadata can change** - filenames, INDEX summaries, and tags are findability infrastructure, not history. Rename files for better attention routing when needed.
+- **Sibling repo boundary** - from this repository, modify sibling repos only for documentation maintenance and generation. Do not change sibling implementation code here.
 - **AGENTS.md stays current** - unlike patterns/visuals, this file is operational and loaded every session. Keep links and instructions working.
 - Maintain architect-level depth (avoid beginner explanations)
 - Ground insights in production evidence (Budget Analyzer repos)
